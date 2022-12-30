@@ -1,0 +1,6 @@
+@import "./variables";
+
+@mixin hoverEffect {
+  color: $hoverColor;
+  transform: translateX(5px);
+}
