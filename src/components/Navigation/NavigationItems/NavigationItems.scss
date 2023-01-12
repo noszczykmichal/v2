@@ -1,5 +1,7 @@
 .navigation-items {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
   list-style: none;
-  align-self: flex-start;
-  padding: 0;
 }

@@ -1,23 +1,29 @@
 @import "../../../../sassStyles/variables";
-@import "../../../../sassStyles/mixins";
 
 .navigation-item {
-  padding: 0.75rem 0;
-  transition: transform 0.5s ease-out;
+  counter-increment: item 1;
 
   a {
     text-decoration: none;
-    color: $fontPrimaryColor;
-    font-weight: 300;
-    font-size: 0.9rem;
-    transition: transform 0.5s ease-out;
+    color: inherit;
+    font-family: $font-mono;
+    font-size: $fz-xs;
+    padding: 0.6rem;
+    transition: all 0.25s cubic-bezier(0.65, 0.05, 0.36, 1);
+    &:hover {
+      color: $green;
+    }
+    &:focus {
+      outline: 2px dashed $green;
+      outline-offset: 3px;
+    }
   }
-}
 
-.navigation-item:hover {
-  transform: translateX(5px);
-  a {
-    @include hoverEffect;
-    font-style: italic;
+  a:before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: $green;
+    font-size: $fz-xxs;
+    text-align: right;
   }
 }

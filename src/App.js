@@ -1,15 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-
-import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home";
+import Toolbar from "./components/Navigation/Toolbar/Toolbar";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} exact />
-      </Routes>
-    </Layout>
+    <div>
+      <header>
+        <Toolbar />
+      </header>
+    </div>
   );
 }
 
