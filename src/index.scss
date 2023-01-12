@@ -4,13 +4,5 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: $defaultFont;
-  background: linear-gradient(to left top, rgba(0, 0, 0, 0.5) 100%, transparent),
-    url("./img/background-image.jpg") right 48% bottom 74% no-repeat;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: 16rem auto;
-  grid-template-areas: "sideNavigation main";
+  background-color: $navy;
 }

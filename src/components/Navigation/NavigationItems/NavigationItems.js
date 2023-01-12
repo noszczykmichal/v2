@@ -3,12 +3,12 @@ import "./NavigationItems.scss";
 
 function NavigationItems() {
   return (
-    <ul className="navigation-items">
-      <NavigationItem>Home</NavigationItem>
-      <NavigationItem>Projects</NavigationItem>
+    <ol className="navigation-items">
+      <NavigationItem>About</NavigationItem>
       <NavigationItem>Skills</NavigationItem>
+      <NavigationItem>Projects</NavigationItem>
       <NavigationItem>Contact</NavigationItem>
-    </ul>
+    </ol>
   );
 }
 

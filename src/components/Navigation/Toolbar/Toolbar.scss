@@ -1,0 +1,31 @@
+@import "../../../sassStyles/variables";
+
+.desktop-navigation {
+  height: $toolbar-height;
+  width: 100vw;
+  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  color: $lightest-grey;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+
+  .resume-button {
+    border: 1px solid $green;
+    border-radius: $custom-border-radius;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: $green;
+    font-size: $fz-xs;
+    margin-right: 4rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $green-tint;
+      outline: none;
+    }
+  }
+}

@@ -1,18 +1,14 @@
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 
 import "./NavigationItem.scss";
 
-function NavigationItem({ children }) {
+function NavigationItem({ hrefTo, children }) {
   return (
     <li className="navigation-item">
-      <NavLink>{children}</NavLink>
+      <Link to={hrefTo}>{children}</Link>
     </li>
   );
 }
-
-NavigationItem.propTypes = {
-  children: PropTypes.string.isRequired,
-};
 
 export default NavigationItem;

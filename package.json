@@ -1,5 +1,6 @@
 {
-  "name": "react-app-template-with-eslint-prettier",
+  "name": "v2",
+  "description": "Personal Website V2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
