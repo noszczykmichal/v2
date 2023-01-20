@@ -1,19 +1,18 @@
-import { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 
-import "./Button.scss";
 import { navLinks } from "../../../utils/config";
+import useCSSTransition from "../../../utils/useCSSTransition";
+import "./Button.scss";
 
 function Button({ children }) {
+  const [nodeRef, isVisible] = useCSSTransition();
   const navLinksLength = navLinks.length;
-  const [isVisible, setVisibility] = useState(false);
-  const nodeRef = useRef();
-  setTimeout(() => setVisibility(true), 0);
+
   return (
     <CSSTransition
       in={isVisible}
-      timeout={2000}
+      timeout={4000}
       classNames={{
         enter: "resume-button--enter",
         enterActive: "resume-button--enter-active",
