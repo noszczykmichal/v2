@@ -1,13 +1,13 @@
-import NavigationItems from "../NavigationItems/NavigationItems";
 import "./Toolbar.scss";
+import NavigationItems from "../NavigationItems/NavigationItems";
+
+import Button from "../UI/Button";
 
 function Toolbar() {
   return (
     <nav className="desktop-navigation">
       <NavigationItems />
-      <a href="/" className="resume-button">
-        Resume
-      </a>
+      <Button>Resume</Button>
     </nav>
   );
 }
