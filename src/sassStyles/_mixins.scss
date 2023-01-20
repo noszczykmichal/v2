@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin animateDown() {
+  @keyframes SlideIn {
+    0% {
+      transform: translateY(-3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  animation: SlideIn 1s $defaultTransitionTiming forwards;
+}
