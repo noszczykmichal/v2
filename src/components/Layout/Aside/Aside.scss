@@ -7,55 +7,49 @@
   align-items: center;
   // Social Component
   ul {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
+    @include columnAside;
     list-style: none;
-    padding: 0;
-    bottom: 0;
-    gap: 2rem;
+    margin: 0;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 1px;
-      height: 90px;
-      margin: 0px auto;
-      background-color: $light-grey;
-    }
+    @include layoutLine;
 
     li {
       a {
         color: inherit;
-        @include svgDefaultStyle;
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+          color: inherit;
+          cursor: pointer;
+          transition: $defaultTransition;
+
+          &:hover,
+          &:focus {
+            color: $green;
+            transform: translateY(-3px);
+          }
+        }
       }
     }
   }
   //Email Component
   div {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    list-style: none;
-    padding: 0;
-    bottom: 0;
-    gap: 2rem;
+    @include columnAside;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 1px;
-      height: 90px;
-      margin: 0px auto;
-      background-color: $light-grey;
-    }
-
+    @include layoutLine;
     a {
       color: inherit;
       text-decoration: none;
       writing-mode: vertical-rl;
       font-family: $font-mono;
       font-size: 0.75rem;
+      transition: $defaultTransition;
+
+      &:hover,
+      &:focus {
+        color: $green;
+        transform: translateY(-3px);
+      }
     }
   }
 }
