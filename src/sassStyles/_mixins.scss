@@ -1,5 +1,6 @@
 @import "./variables";
 
+//Animations
 @mixin animateDown() {
   @keyframes SlideIn {
     0% {
@@ -12,4 +13,20 @@
     }
   }
   animation: SlideIn 1s $defaultTransitionTiming forwards;
+}
+
+//Styles
+@mixin svgDefaultStyle() {
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $green;
+      transform: translateY(-3px);
+    }
+  }
 }
