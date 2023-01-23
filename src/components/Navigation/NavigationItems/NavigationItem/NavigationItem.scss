@@ -10,7 +10,7 @@
     font-family: $font-mono;
     font-size: $fz-xs;
     padding: 0.6rem;
-    transition: all 0.25s $defaultTransitionTiming;
+    transition: $defaultTransition;
     &:hover {
       color: $green;
     }
