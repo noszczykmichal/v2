@@ -1,8 +1,8 @@
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 
-import { navLinks } from "../../../utils/config";
-import useCSSTransition from "../../../utils/useCSSTransition";
+import { navLinks } from "../../utils/config";
+import useCSSTransition from "../../utils/useCSSTransition";
 import "./Button.scss";
 
 function Button({ children }) {

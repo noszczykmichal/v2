@@ -1,5 +1,5 @@
-@import "../../../sassStyles/mixins";
-@import "../../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+@import "../../sassStyles/variables";
 
 .resume-button {
   border: 1px solid $green;
@@ -8,7 +8,6 @@
   text-decoration: none;
   color: $green;
   font-size: $fz-xs;
-  margin-right: 4rem;
 
   &:hover,
   &:active,

@@ -1,13 +1,7 @@
-import Toolbar from "./components/Navigation/Toolbar/Toolbar";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return (
-    <div>
-      <header>
-        <Toolbar />
-      </header>
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;

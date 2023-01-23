@@ -1,0 +1,19 @@
+import Toolbar from "../Navigation/Toolbar/Toolbar";
+import Social from "./Social/Social";
+import Email from "./Email/Email";
+import "./Layout.scss";
+
+function Layout() {
+  return (
+    <>
+      <Toolbar />
+      <main>
+        <Social />
+        <section />
+        <Email />
+      </main>
+    </>
+  );
+}
+
+export default Layout;
