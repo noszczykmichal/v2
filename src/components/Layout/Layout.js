@@ -1,6 +1,7 @@
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import Social from "./Social/Social";
 import Email from "./Email/Email";
+import About from "../Sections/About";
 import "./Layout.scss";
 
 function Layout() {
@@ -9,7 +10,9 @@ function Layout() {
       <Toolbar />
       <main>
         <Social />
-        <section />
+        <section>
+          <About />
+        </section>
         <Email />
       </main>
     </>

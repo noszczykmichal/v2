@@ -1,0 +1,37 @@
+@import "../../sassStyles/mixins";
+@import "../../sassStyles/variables";
+
+.about {
+  font-family: $font-sans;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: ($toolbar-height + 5rem);
+
+  h1 {
+    margin: 0px 0px 30px 4px;
+    font-size: clamp($fz-sm, 5vw, $fz-md);
+    font-weight: 400;
+    font-family: $font-mono;
+    color: $green;
+  }
+
+  h2,
+  h3 {
+    @include headingBig;
+  }
+
+  h3 {
+    margin-top: 5px;
+    color: $grey;
+    line-height: 0.9;
+  }
+
+  p {
+    margin: 1.25rem 0 0;
+    max-width: 540px;
+    color: $grey;
+    line-height: 1.3;
+  }
+}

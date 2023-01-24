@@ -24,6 +24,12 @@
   bottom: 0;
   gap: 2rem;
 }
+
+@mixin headingBig() {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 600;
+}
 //Element
 @mixin layoutLine() {
   &::after {
