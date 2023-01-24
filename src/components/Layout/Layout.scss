@@ -2,8 +2,4 @@ main {
   height: 100vh;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-
-  p {
-    writing-mode: vertical-lr;
-  }
 }
