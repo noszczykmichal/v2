@@ -10,9 +10,7 @@ function Layout() {
       <Toolbar />
       <main>
         <Social />
-        <section>
-          <About />
-        </section>
+        <About />
         <Email />
       </main>
     </>
