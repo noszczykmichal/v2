@@ -1,20 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 
 import "./About.scss";
-import WithCssTransition from "./WithCssTransition/WithCssTransition";
+import { navDelay } from "../../utils/config";
+import TransitionWrapper from "./TransitionWrapper/TransitionWrapper";
 
 function About() {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotionRef = useRef(prefersReducedMotion);
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotionRef.current) {
       return undefined;
     }
 
-    const timeout = setTimeout(() => setIsMounted(true), 1000);
+    const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -51,14 +53,14 @@ function About() {
               );
 
               return (
-                <WithCssTransition
+                <TransitionWrapper
                   classes="fadeup"
                   animStart={isMounted}
                   delayFactor={index}
                   key={key}
                 >
                   {element}
-                </WithCssTransition>
+                </TransitionWrapper>
               );
             })}
         </TransitionGroup>
