@@ -1,12 +1,9 @@
-/* eslint-disable consistent-return */
-/* eslint-disable prefer-const */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable no-unused-vars */
-import { useState, useEffect, useRef } from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { useState, useEffect } from "react";
+import { TransitionGroup } from "react-transition-group";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 
 import "./About.scss";
+import WithCssTransition from "./WithCssTransition/WithCssTransition";
 
 function About() {
   const [isMounted, setIsMounted] = useState(false);
@@ -14,7 +11,7 @@ function About() {
 
   useEffect(() => {
     if (prefersReducedMotion) {
-      return;
+      return undefined;
     }
 
     const timeout = setTimeout(() => setIsMounted(true), 1000);
@@ -37,17 +34,31 @@ function About() {
   return (
     <section className="about">
       {prefersReducedMotion ? (
-        <>{content.map((element) => element)}</>
+        <>
+          {content.map((element) => {
+            const key = element.props.children.substring(
+              element.props.children.length - 4,
+            );
+            return <div key={key}>{element}</div>;
+          })}
+        </>
       ) : (
         <TransitionGroup component={null}>
           {isMounted &&
             content.map((element, index) => {
+              const key = element.props.children.substring(
+                element.props.children.length - 4,
+              );
+
               return (
-                <CSSTransition timeout={2000} classNames="fadeup" key={index}>
-                  <div style={{ transitionDelay: `${index + 1}00ms` }}>
-                    {element}
-                  </div>
-                </CSSTransition>
+                <WithCssTransition
+                  classes="fadeup"
+                  animStart={isMounted}
+                  delayFactor={index}
+                  key={key}
+                >
+                  {element}
+                </WithCssTransition>
               );
             })}
         </TransitionGroup>
