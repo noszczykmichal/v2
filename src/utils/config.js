@@ -13,3 +13,6 @@ export const socialMedia = [
   { name: "Github", url: "https://github.com/noszczykmichal" },
   { name: "Linkedin", url: "https://www.linkedin.com/in/michal-noszczyk/" },
 ];
+
+export const navDelay = 1000;
+export const loaderDelay = 2000;

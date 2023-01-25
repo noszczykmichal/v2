@@ -15,6 +15,19 @@
   animation: SlideIn 1s $easing forwards;
 }
 
+@mixin fadeUp() {
+  .fadeup-enter {
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 300ms $easing, transform 300ms $easing;
+  }
+  .fadeup-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms $easing, transform 300ms $easing;
+  }
+}
+
 //Styles
 @mixin columnAside() {
   display: flex;
