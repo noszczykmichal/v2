@@ -58,6 +58,7 @@ function About() {
                   animStart={isMounted}
                   delayFactor={index}
                   key={key}
+                  delayed
                 >
                   {element}
                 </TransitionWrapper>
