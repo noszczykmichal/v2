@@ -1,30 +1,25 @@
+import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import useCSSTransition from "../../../../utils/useCSSTransition";
 import "./NavigationItem.scss";
+import { loaderDelay } from "../../../../utils/config";
 
-function NavigationItem({ url, index, children }) {
-  const [nodeRef, isVisible] = useCSSTransition();
+function NavigationItem({ animStart, classes, url, delayFactor, children }) {
+  const nodeRef = useRef();
 
   return (
     <CSSTransition
-      in={isVisible}
-      timeout={2000}
-      classNames={{
-        enter: "navigation-item--enter",
-        enterActive: "navigation-item--enter-active",
-        exit: "",
-        exitActive: "",
-      }}
-      mountOnEnter
+      in={animStart}
+      timeout={loaderDelay}
+      classNames={classes}
       nodeRef={nodeRef}
     >
       <li
         className="navigation-item"
         ref={nodeRef}
-        style={{ animationDelay: `${index * 200}ms` }}
+        style={{ transitionDelay: `${delayFactor * 100}ms` }}
       >
         <Link to={url}>{children}</Link>
       </li>
@@ -33,8 +28,10 @@ function NavigationItem({ url, index, children }) {
 }
 
 NavigationItem.propTypes = {
+  animStart: PropTypes.bool.isRequired,
+  classes: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
+  delayFactor: PropTypes.number.isRequired,
   children: PropTypes.string.isRequired,
 };
 

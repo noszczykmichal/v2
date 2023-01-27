@@ -1,30 +1,29 @@
 @import "./variables";
 
 //Animations
-@mixin animateDown() {
-  @keyframes SlideIn {
-    0% {
-      transform: translateY(-3rem);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+@mixin fadeDown() {
+  .fadedown-enter {
+    opacity: 0.01;
+    transform: translateY(-20px);
+    transition: all 300ms $easing;
   }
-  animation: SlideIn 1s $easing forwards;
+  .fadedown-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 300ms $easing;
+  }
 }
 
 @mixin fadeUp() {
   .fadeup-enter {
     opacity: 0.01;
     transform: translateY(20px);
-    transition: opacity 300ms $easing, transform 300ms $easing;
+    transition: all 300ms $easing;
   }
   .fadeup-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms $easing, transform 300ms $easing;
+    transition: all 300ms $easing;
   }
 }
 

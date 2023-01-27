@@ -29,11 +29,4 @@
   }
 }
 
-.navigation-item--enter {
-  opacity: 0;
-  transform: translateY(-3rem);
-}
-
-.navigation-item--enter-active {
-  @include animateDown;
-}
+@include fadeDown;
