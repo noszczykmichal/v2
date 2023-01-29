@@ -1,11 +1,12 @@
 import Aside from "../Aside/Aside";
 import Icon from "../Icon/Icon";
 import { socialMedia } from "../../../utils/config";
+import "./Social.scss";
 
 function Social() {
   return (
     <Aside>
-      <ul>
+      <ul className="social-icons">
         {socialMedia.map((social) => (
           <li key={social.name}>
             <a

@@ -2,19 +2,13 @@ import PropTypes from "prop-types";
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import "./TransitionWrapper.scss";
 import { loaderDelay } from "../../../utils/config";
+import "./TransitionWrapper.scss";
 
-function TransitionWrapper({
-  animStart,
-  classes,
-  delayed,
-  delayFactor,
-  children,
-}) {
+function TransitionWrapper({ animStart, classes, delayFactor, children }) {
   const nodeRef = useRef();
 
-  return delayed ? (
+  return (
     <CSSTransition
       in={animStart}
       timeout={loaderDelay}
@@ -25,17 +19,18 @@ function TransitionWrapper({
         {children}
       </div>
     </CSSTransition>
-  ) : (
-    <div />
   );
 }
 
 TransitionWrapper.propTypes = {
   animStart: PropTypes.bool.isRequired,
   classes: PropTypes.string.isRequired,
-  delayed: PropTypes.bool.isRequired,
-  delayFactor: PropTypes.number.isRequired,
+  delayFactor: PropTypes.number,
   children: PropTypes.element.isRequired,
+};
+
+TransitionWrapper.defaultProps = {
+  delayFactor: -1,
 };
 
 export default TransitionWrapper;

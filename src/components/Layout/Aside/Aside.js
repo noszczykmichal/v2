@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import usePrefersReducedMotion from "../../../utils/usePrefersReducedMotion";
 import { loaderDelay } from "../../../utils/config";
-import AsideWrapper from "./AsideWrapper/AsideWrapper";
+import TransitionWrapper from "../../UI/TransitionWrapper/TransitionWrapper";
 import "./Aside.scss";
 
 function Aside({ children }) {
@@ -30,9 +30,9 @@ function Aside({ children }) {
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
-            <AsideWrapper animStart={isMounted} delay={loaderDelay}>
+            <TransitionWrapper animStart={isMounted} classes="fade">
               {children}
-            </AsideWrapper>
+            </TransitionWrapper>
           )}
         </TransitionGroup>
       )}

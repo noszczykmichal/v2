@@ -4,7 +4,7 @@ import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 
 import "./About.scss";
 import { navDelay } from "../../utils/config";
-import TransitionWrapper from "./TransitionWrapper/TransitionWrapper";
+import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 
 function About() {
   const [isMounted, setIsMounted] = useState(false);
@@ -58,7 +58,6 @@ function About() {
                   animStart={isMounted}
                   delayFactor={index}
                   key={key}
-                  delayed
                 >
                   {element}
                 </TransitionWrapper>
