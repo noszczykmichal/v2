@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import "./TransitionWrapper.scss";
 import { loaderDelay } from "../../../utils/config";
+import "./TransitionWrapper.scss";
 
 function TransitionWrapper({ animStart, classes, delayFactor, children }) {
   const nodeRef = useRef();
@@ -25,8 +25,12 @@ function TransitionWrapper({ animStart, classes, delayFactor, children }) {
 TransitionWrapper.propTypes = {
   animStart: PropTypes.bool.isRequired,
   classes: PropTypes.string.isRequired,
-  delayFactor: PropTypes.number.isRequired,
+  delayFactor: PropTypes.number,
   children: PropTypes.element.isRequired,
+};
+
+TransitionWrapper.defaultProps = {
+  delayFactor: -1,
 };
 
 export default TransitionWrapper;
