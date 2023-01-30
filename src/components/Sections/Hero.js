@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 
-import "./About.scss";
+import "./Hero.scss";
 import { navDelay } from "../../utils/config";
 import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 
