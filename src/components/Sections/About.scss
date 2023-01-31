@@ -1,0 +1,32 @@
+@import "../../sassStyles/variables";
+
+.inner-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 3rem;
+}
+
+.image-wrapper {
+  background-image: url("../../assets/me.jpg");
+  background-size: cover;
+  max-height: 230px;
+  display: block;
+  border-radius: 4px;
+}
+/*
+       <p>
+            Currently, I work at Cheil Poland as a Web Publisher, where I build,
+            administer and update content on pages of Samsung. Yet, every free
+            moment I spend on mastering my programmatic skills through building
+            my own projects.
+          </p>
+          <p>
+*/
+.about {
+  p {
+    font-size: 1.25rem;
+    font-family: $font-sans;
+    line-height: 26px;
+    color: #8892b0;
+  }
+}

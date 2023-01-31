@@ -21,10 +21,14 @@ function About() {
   }, []);
 
   const one = <h1>Hi, my name is </h1>;
-  const two = <h2>Michał Noszczyk.</h2>;
-  const three = <h3>I&apos;m an aspiring Junior Frontend Developer.</h3>;
+  const two = <h2 className="heading--big">Michal Noszczyk.</h2>;
+  const three = (
+    <h3 className="heading--big">
+      I&apos;m an aspiring Junior Frontend Developer.
+    </h3>
+  );
   const four = (
-    <p>
+    <p className="subheading">
       I&apos;m passionate about learning new things. Every free moment, I spend
       on practising my skills, building my own projects and having fun while
       programming.
@@ -34,7 +38,7 @@ function About() {
   const content = [one, two, three, four];
 
   return (
-    <section className="about">
+    <section className="hero">
       {prefersReducedMotion ? (
         <>
           {content.map((element) => {

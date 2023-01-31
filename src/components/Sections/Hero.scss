@@ -1,7 +1,7 @@
 @import "../../sassStyles/mixins";
 @import "../../sassStyles/variables";
 
-.about {
+.hero {
   font-family: $font-sans;
   height: 100vh;
   display: flex;
@@ -17,18 +17,13 @@
     color: $green;
   }
 
-  h2,
-  h3 {
-    @include headingBig;
-  }
-
   h3 {
     margin-top: 5px;
     color: $grey;
     line-height: 0.9;
   }
 
-  p {
+  .subheading {
     margin: 1.25rem 0 0;
     max-width: 540px;
     color: $grey;
