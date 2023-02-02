@@ -1,6 +1,31 @@
+import { gql, useQuery } from "@apollo/client";
+
 import "./About.scss";
+import StyledPic from "../UI/StyledPic/StyledPic";
 
 function About() {
+  const query = gql`
+    query {
+      catalogue(path: "/secondimage") {
+        ... on Product {
+          variants {
+            name
+            images {
+              url
+              variants {
+                url
+                key
+                width
+                height
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+  const { data } = useQuery(query);
+
   return (
     <section className="about">
       <h2 className="numbered-heading">About Me</h2>
@@ -30,8 +55,9 @@ function About() {
           </p>
         </div>
         {/* <div className="wrap"> */}
-        <div className="image-wrapper" />
+        {/* <img src={me} className="image-wrapper" alt="me" /> */}
         {/* </div> */}
+        {data && <StyledPic data={data} />}
       </div>
     </section>
   );

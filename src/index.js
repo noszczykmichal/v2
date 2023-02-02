@@ -1,16 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { InMemoryCache, ApolloClient, ApolloProvider } from "@apollo/client";
 
+import App from "./App";
 import "./index.scss";
+
+const client = new ApolloClient({
+  uri: "https://api.crystallize.com/noszczykmichal/catalogue/",
+  cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>,
 );
 
