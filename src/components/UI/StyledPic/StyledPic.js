@@ -3,15 +3,24 @@
 
 import { Image } from "@crystallize/reactjs-components";
 
+import "./StyledPic.scss";
+
 function StyledPic({ data }) {
-  //   console.log(data.catalogue.variants[0].images[0].url);
   const imageFromCrystallize = {
-    url: `${data.catalogue.variants[0].images[0].url}`,
+    url: data.catalogue.variants[0].images[0].url,
     variants: [...data.catalogue.variants[0].images[0].variants],
-    // alt: "my photo",
+    alt: data.catalogue.variants[0].images[0].altText,
   };
+
   return (
-    <Image {...imageFromCrystallize} sizes="(max-width: 300px) 300w, 700px" />
+    <div className="image-wrapper">
+      <div className="image-wrapper__container">
+        <Image
+          {...imageFromCrystallize}
+          sizes="(min-width: 500px) 500px, 100vw"
+        />
+      </div>
+    </div>
   );
 }
 

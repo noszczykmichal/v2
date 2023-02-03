@@ -6,17 +6,15 @@ import StyledPic from "../UI/StyledPic/StyledPic";
 function About() {
   const query = gql`
     query {
-      catalogue(path: "/secondimage") {
+      catalogue(path: "/my-image") {
         ... on Product {
           variants {
-            name
             images {
               url
+              altText
               variants {
                 url
-                key
                 width
-                height
               }
             }
           }
@@ -54,9 +52,6 @@ function About() {
             form attached at the bottom of the page!{" "}
           </p>
         </div>
-        {/* <div className="wrap"> */}
-        {/* <img src={me} className="image-wrapper" alt="me" /> */}
-        {/* </div> */}
         {data && <StyledPic data={data} />}
       </div>
     </section>
