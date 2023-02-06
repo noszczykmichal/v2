@@ -1,9 +1,23 @@
 import { gql, useQuery } from "@apollo/client";
+import { useRef, useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 import "./About.scss";
+import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import { srConfig } from "../../utils/config";
 import StyledPic from "../UI/StyledPic/StyledPic";
 
 function About() {
+  const revealContainer = useRef();
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotionRef = useRef(prefersReducedMotion);
+  useEffect(() => {
+    if (prefersReducedMotionRef.current) {
+      return undefined;
+    }
+
+    return ScrollReveal().reveal(revealContainer.current, srConfig());
+  }, []);
   const query = gql`
     query {
       catalogue(path: "/my-image") {
@@ -25,7 +39,7 @@ function About() {
   const { data } = useQuery(query);
 
   return (
-    <section className="about">
+    <section className="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
       <div className="inner-wrapper">
         <div>
