@@ -1,0 +1,20 @@
+@import "../../sassStyles/variables";
+
+.about {
+  max-width: 900px;
+
+  .inner-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 3rem;
+    @media (max-width: 768px) {
+      display: block;
+    }
+    p {
+      font-size: 1.1rem;
+      font-family: $font-sans;
+      line-height: 26px;
+      color: #8892b0;
+    }
+  }
+}

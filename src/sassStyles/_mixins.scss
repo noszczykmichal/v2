@@ -54,11 +54,6 @@
   gap: 2rem;
 }
 
-@mixin headingBig() {
-  margin: 0;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 600;
-}
 //Element
 @mixin layoutLine() {
   &::after {
@@ -68,5 +63,37 @@
     height: 90px;
     margin: 0px auto;
     background-color: $light-grey;
+  }
+}
+
+@mixin inlineLink {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: $green;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+    outline: 0;
+    &:after {
+      width: 100%;
+    }
+    & > * {
+      color: $green;
+      transition: $defaultTransition;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: $green;
+    transition: $defaultTransition;
+    opacity: 0.5;
   }
 }
