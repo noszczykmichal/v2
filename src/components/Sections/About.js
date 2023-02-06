@@ -37,11 +37,25 @@ function About() {
             something new and here I am.
           </p>
           <p>
-            Currently, I work at Cheil Poland as a Web Publisher, where I
-            co-operate with Samsung upon building, updating and administration
-            of its sites. Yet, every free moment I devote to acquiring new
-            skills and mastering the ones I currently have through building my
-            own projects.
+            Currently, I work at{" "}
+            <a
+              href="https://cheil.uk/?languages=en&regionNm=United+Kingdom"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cheil Poland
+            </a>{" "}
+            as a Web Publisher, where I co-operate with{" "}
+            <a
+              href="https://www.samsung.com/uk/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Samsung
+            </a>{" "}
+            upon building, updating and administration of its sites. Yet, every
+            free moment I devote to acquiring new skills and mastering the ones
+            I currently have through building my own projects.
           </p>
           <p>
             Grasp my resume through the button at the navigation bar or check my
