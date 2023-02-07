@@ -1,15 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/prop-types */
-
+import PropTypes from "prop-types";
 import { Image } from "@crystallize/reactjs-components";
 
 import "./StyledPic.scss";
 
-function StyledPic({ data }) {
+function StyledPic({ catalogue }) {
   const imageFromCrystallize = {
-    url: data.catalogue.variants[0].images[0].url,
-    variants: [...data.catalogue.variants[0].images[0].variants],
-    alt: data.catalogue.variants[0].images[0].altText,
+    url: catalogue.variants[0].images[0].url,
+    variants: [...catalogue.variants[0].images[0].variants],
+    alt: catalogue.variants[0].images[0].altText,
   };
 
   return (
@@ -23,5 +22,26 @@ function StyledPic({ data }) {
     </div>
   );
 }
+
+StyledPic.propTypes = {
+  catalogue: PropTypes.shape({
+    variants: PropTypes.arrayOf(
+      PropTypes.shape({
+        images: PropTypes.arrayOf(
+          PropTypes.shape({
+            altText: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            variants: PropTypes.arrayOf(
+              PropTypes.shape({
+                url: PropTypes.string.isRequired,
+                width: PropTypes.number.isRequired,
+              }).isRequired,
+            ).isRequired,
+          }).isRequired,
+        ).isRequired,
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+};
 
 export default StyledPic;
