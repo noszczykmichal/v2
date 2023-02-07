@@ -80,7 +80,7 @@ function About() {
             contact form at the bottom of the page.{" "}
           </p>
         </div>
-        {data && <StyledPic data={data} />}
+        {data && <StyledPic catalogue={data.catalogue} />}
       </div>
     </section>
   );
