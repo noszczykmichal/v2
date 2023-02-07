@@ -44,10 +44,10 @@ function About() {
       <div className="inner-wrapper">
         <div>
           <p>
-            Hello! My name is Michal and I am aspiring Junior Frontend
-            Developer. For 9 years I&apos;ve worked in various financial
-            institutions helping entrepreneurs acquire financing for their
-            businesses. At some point, I&apos;ve decided I want to start
+            Hello! My name is Michal, and I am aspiring Junior Frontend
+            Developer. For 9 years, I&apos;ve worked in various financial
+            institutions, assisting entrepreneurs in acquiring financing for
+            their businesses. At some point, I&apos;ve decided I want to start
             something new and here I am.
           </p>
           <p>
@@ -59,7 +59,7 @@ function About() {
             >
               Cheil Poland
             </a>{" "}
-            as a Web Publisher, where I co-operate with{" "}
+            as a Web Publisher, where I collaborate with{" "}
             <a
               href="https://www.samsung.com/uk/"
               target="_blank"
@@ -67,17 +67,17 @@ function About() {
             >
               Samsung
             </a>{" "}
-            upon building, updating and administration of its sites. Yet, every
-            free moment I devote to acquiring new skills and mastering the ones
-            I currently have through building my own projects.
+            on building, updating, and maintaining its websites. Yet, in my free
+            time, I devote every moment to acquiring new skills and mastering
+            the ones I currently have by building my own projects.
           </p>
           <p>
-            Grasp my resume through the button at the navigation bar or check my
-            skills and latest projects.
+            Grasp my resume through the button at the navigation bar, or check
+            my skills and recent projects.
           </p>
           <p>
-            Feel free to contact me any time through Linkedin or the contact
-            form attached at the bottom of the page!{" "}
+            Feel free to reach out to me at any time through LinkedIn or via the
+            contact form at the bottom of the page.{" "}
           </p>
         </div>
         {data && <StyledPic data={data} />}
