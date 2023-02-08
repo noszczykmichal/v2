@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Mono&family=Inter:wght@400;600&family=Roboto+Mono&display=swap");
 // Colors
 $navy: #0a192f;
+$light-navy: #112240;
 $lightest-navy: #233554;
 $green: #64ffda;
 $dark-grey: #495670;
@@ -29,3 +30,8 @@ $fz-heading: 2rem;
 //Sizes
 $toolbar-height: 4.375rem;
 $custom-border-radius: 0.25rem;
+$tab-height: 42px;
+
+:export {
+  tabHeight: $tab-height;
+}
