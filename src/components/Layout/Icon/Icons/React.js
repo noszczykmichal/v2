@@ -1,20 +1,7 @@
 function React() {
   return (
-    <svg
-      width="800px"
-      height="800px"
-      viewBox="0 0 64 64"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        strokeLinejoin: "round",
-        strokeMiterlimit: "2",
-      }}
-    >
+    <svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <rect
-        id="Icons"
         x="-1088"
         y="-64"
         width="1280"

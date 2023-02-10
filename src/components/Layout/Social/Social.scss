@@ -9,19 +9,6 @@
   li {
     a {
       color: inherit;
-      svg {
-        width: 1.25rem;
-        height: 1.25rem;
-        color: inherit;
-        cursor: pointer;
-        transition: $defaultTransition;
-
-        &:hover,
-        &:focus {
-          color: $green;
-          transform: translateY(-3px);
-        }
-      }
     }
   }
 
