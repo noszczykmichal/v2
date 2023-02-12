@@ -39,7 +39,7 @@ export const skillsTabs = [
   {
     name: "Hard Skills",
     contents: [
-      { iconName: "Html", subHeading: "HTML" },
+      { iconName: "Html", subHeading: "HTML5" },
       { iconName: "CSS", subHeading: "CSS3" },
       { iconName: "JavaScript", subHeading: "JavaScript" },
       { iconName: "Sass", subHeading: "Sass" },
