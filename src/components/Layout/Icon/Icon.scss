@@ -19,6 +19,11 @@
 .noAnimation {
   svg {
     transform: scale(1.3);
+    fill: #0a192f;
+    fill-opacity: 1;
+    stroke-width: 20;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     path {
       fill: $grey !important;
     }

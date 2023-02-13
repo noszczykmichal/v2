@@ -1,7 +1,8 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
-import { skillsTabs } from "../../utils/config";
+import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import { srConfig, skillsTabs } from "../../utils/config";
 import tabHeight from "../../sassStyles/_variables.scss";
 import Icon from "../Layout/Icon/Icon";
 import "./Skills.scss";
@@ -9,9 +10,20 @@ import "./Skills.scss";
 function Skills() {
   const [activeTabId, setActiveTabId] = useState(0);
   const tab = tabHeight.tabHeight;
+  const revealContainer = useRef();
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotionRef = useRef(prefersReducedMotion);
+
+  useEffect(() => {
+    if (prefersReducedMotionRef.current) {
+      return undefined;
+    }
+
+    return ScrollReveal().reveal(revealContainer.current, srConfig());
+  }, []);
 
   return (
-    <section className="skills">
+    <section className="skills" ref={revealContainer}>
       <h2 className="numbered-heading">What I&apos;ve learnt</h2>
       <div className="tab">
         <div className="tab__list">
