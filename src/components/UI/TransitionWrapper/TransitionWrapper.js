@@ -7,6 +7,7 @@ import "./TransitionWrapper.scss";
 
 function TransitionWrapper({ animStart, classes, delayFactor, children }) {
   const nodeRef = useRef();
+  const val = false;
 
   return (
     <CSSTransition
@@ -14,6 +15,8 @@ function TransitionWrapper({ animStart, classes, delayFactor, children }) {
       timeout={loaderDelay}
       classNames={classes}
       nodeRef={nodeRef}
+      unmountOnExit={val}
+      mountOnEnter={val}
     >
       <div style={{ transitionDelay: `${delayFactor + 1}00ms` }} ref={nodeRef}>
         {children}
@@ -26,7 +29,7 @@ TransitionWrapper.propTypes = {
   animStart: PropTypes.bool.isRequired,
   classes: PropTypes.string.isRequired,
   delayFactor: PropTypes.number,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 TransitionWrapper.defaultProps = {

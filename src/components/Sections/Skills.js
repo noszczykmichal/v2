@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { srConfig, skillsTabs } from "../../utils/config";
 import tabHeight from "../../sassStyles/_variables.scss";
 import Icon from "../Layout/Icon/Icon";
+// import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 import "./Skills.scss";
 
 function Skills() {
@@ -48,12 +50,25 @@ function Skills() {
 
         <div className="tab__panels">
           <div className="tab__panel">
-            {skillsTabs[activeTabId].contents.map((element) => (
-              <div key={element.subHeading}>
-                <Icon name={element.iconName} animate={false} alt="noname" />
-                <p>{element.subHeading}</p>
-              </div>
-            ))}
+            <TransitionGroup component="div">
+              {skillsTabs[activeTabId].contents.map((element) => (
+                <CSSTransition
+                  timeout={300}
+                  key={element.subHeading}
+                  classNames="fade"
+                  unmountOnExit
+                >
+                  <>
+                    <Icon
+                      name={element.iconName}
+                      animate={false}
+                      alt="noname"
+                    />
+                    <p>{element.subHeading}</p>
+                  </>
+                </CSSTransition>
+              ))}
+            </TransitionGroup>
           </div>
         </div>
       </div>
