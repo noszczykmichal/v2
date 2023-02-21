@@ -30,7 +30,7 @@ function Skills() {
 
   return (
     <section className="skills" ref={revealContainer}>
-      <h2 className="numbered-heading">What I&apos;ve learnt</h2>
+      <h2 className="numbered-heading">What I&apos;ve Learnt</h2>
       <div className="tab">
         <div className="tab__list">
           {skillsTabs.map((element, index) => (
