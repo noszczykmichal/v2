@@ -1,13 +1,17 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { TransitionGroup } from "react-transition-group";
 
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { srConfig, skillsTabs } from "../../utils/config";
 import tabHeight from "../../sassStyles/_variables.scss";
 import Icon from "../Layout/Icon/Icon";
+import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 import "./Skills.scss";
 
 function Skills() {
+  const [isMounted, setIsMounted] = useState(false);
   const [activeTabId, setActiveTabId] = useState(0);
   const tab = tabHeight.tabHeight;
   const revealContainer = useRef();
@@ -18,6 +22,8 @@ function Skills() {
     if (prefersReducedMotionRef.current) {
       return undefined;
     }
+
+    setTimeout(() => setIsMounted(true), 1000);
 
     return ScrollReveal().reveal(revealContainer.current, srConfig());
   }, []);
@@ -47,14 +53,36 @@ function Skills() {
         </div>
 
         <div className="tab__panels">
-          <div className="tab__panel">
-            {skillsTabs[activeTabId].contents.map((element) => (
-              <div key={element.subHeading}>
-                <Icon name={element.iconName} animate={false} alt="noname" />
-                <p>{element.subHeading}</p>
+          {prefersReducedMotion ? (
+            <div className="tab__panel">
+              <div className="container">
+                {skillsTabs[activeTabId].contents.map((element) => (
+                  <div key={element.subHeading}>
+                    <Icon name={element.iconName} animate={false} />
+                    <p>{element.subHeading}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <TransitionGroup className="tab__panel">
+              <>
+                <div className="container">
+                  {skillsTabs[activeTabId].contents.map((element, index) => (
+                    <TransitionWrapper
+                      animStart={isMounted}
+                      delayFactor={index}
+                      key={element.subHeading}
+                      classes="fade"
+                    >
+                      <Icon name={element.iconName} animate={false} />
+                      <p>{element.subHeading}</p>
+                    </TransitionWrapper>
+                  ))}
+                </div>
+              </>
+            </TransitionGroup>
+          )}
         </div>
       </div>
     </section>

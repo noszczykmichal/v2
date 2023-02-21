@@ -26,7 +26,7 @@ TransitionWrapper.propTypes = {
   animStart: PropTypes.bool.isRequired,
   classes: PropTypes.string.isRequired,
   delayFactor: PropTypes.number,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 TransitionWrapper.defaultProps = {
