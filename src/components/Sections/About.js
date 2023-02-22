@@ -1,4 +1,3 @@
-import { gql, useQuery } from "@apollo/client";
 import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
@@ -18,25 +17,6 @@ function About() {
 
     return ScrollReveal().reveal(revealContainer.current, srConfig());
   }, []);
-  const query = gql`
-    query {
-      catalogue(path: "/my-image") {
-        ... on Product {
-          variants {
-            images {
-              url
-              altText
-              variants {
-                url
-                width
-              }
-            }
-          }
-        }
-      }
-    }
-  `;
-  const { data } = useQuery(query);
 
   return (
     <section className="about" ref={revealContainer}>
@@ -80,7 +60,7 @@ function About() {
             contact form at the bottom of the page.{" "}
           </p>
         </div>
-        {data && <StyledPic catalogue={data.catalogue} />}
+        <StyledPic imagePath="/my-image" />
       </div>
     </section>
   );
