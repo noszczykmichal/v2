@@ -75,7 +75,7 @@ function Skills() {
                       key={element.subHeading}
                       classes="fade"
                     >
-                      <Icon name={element.iconName} animate={false} />
+                      <Icon name={element.iconName} />
                       <p>{element.subHeading}</p>
                     </TransitionWrapper>
                   ))}

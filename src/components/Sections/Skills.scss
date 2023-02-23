@@ -1,5 +1,6 @@
 .skills {
   @import "../../sassStyles/variables";
+  @import "../../sassStyles/mixins";
 
   .tab {
     display: flex;
@@ -67,6 +68,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            @include svg-no-animation;
             p {
               margin-top: 0.8rem;
               font-family: $font-mono;

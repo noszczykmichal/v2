@@ -15,7 +15,7 @@ function Social() {
               target="_blank"
               rel="noreferrer"
             >
-              <Icon name={social.name} animate />
+              <Icon name={social.name} />
             </a>
           </li>
         ))}

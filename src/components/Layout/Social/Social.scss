@@ -9,6 +9,7 @@
   li {
     a {
       color: inherit;
+      @include svg-with-animation;
     }
   }
 
