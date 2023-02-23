@@ -19,9 +19,8 @@ import Teamwork from "./Icons/Teamwork";
 import ToDoList from "./Icons/ToDoList";
 import VisualStudioCode from "./Icons/VisualStudioCode";
 import DefaultIcon from "./Icons/DefaultIcon";
-import "./Icon.scss";
 
-function Icon({ name, animate }) {
+function Icon({ name }) {
   const renderSwitch = (name) => {
     switch (name) {
       case "CommunicationSkills":
@@ -64,16 +63,11 @@ function Icon({ name, animate }) {
         return <DefaultIcon />;
     }
   };
-  return (
-    <div className={animate ? "animation" : "noAnimation"}>
-      {renderSwitch(name)}
-    </div>
-  );
+  return renderSwitch(name);
 }
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
-  animate: PropTypes.bool.isRequired,
 };
 
 export default Icon;
