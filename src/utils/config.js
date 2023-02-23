@@ -77,3 +77,15 @@ export const skillsTabs = [
     ],
   },
 ];
+
+export const projects = [
+  {
+    title: "Minimalistic-storefront",
+    description:
+      'As the name suggests it is a mock-up page of an imaginary online shop, fetching data from  the  GraphQL endpoint. The  project consists of  three main  "pages": PLP(category page), PDP (product page) and Cart page. In the project I am using setup with class-based components (project requirement). ',
+    liveUrl: "https://minimalistic-storefront.web.app/",
+    repoUrl: "https://github.com/noszczykmichal/minimalistic-storefront",
+    imageSrc: "/minimalistic-storefront",
+    tech: ["Reactjs", "Redux", "GraphQl", "Heroku", "ESLint", "Prettier"],
+  },
+];

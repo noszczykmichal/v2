@@ -1,31 +1,12 @@
-import { gql, useQuery } from "@apollo/client";
+// import { gql, useQuery } from "@apollo/client";
 import PropTypes from "prop-types";
 import { Image } from "@crystallize/reactjs-components";
 
 import "./StyledPic.scss";
+import useCrystallize from "../../../utils/useCrystallize";
 
 function StyledPic({ imagePath }) {
-  const getImage = gql`
-    query GetImage($imagePath: String!) {
-      catalogue(path: $imagePath) {
-        ... on Product {
-          variants {
-            images {
-              url
-              altText
-              variants {
-                url
-                width
-              }
-            }
-          }
-        }
-      }
-    }
-  `;
-  const { data } = useQuery(getImage, {
-    variables: { imagePath },
-  });
+  const { data } = useCrystallize(imagePath);
 
   let imageFromCrystallize = {};
   if (data) {
