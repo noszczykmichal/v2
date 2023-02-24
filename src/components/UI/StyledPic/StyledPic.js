@@ -1,4 +1,3 @@
-// import { gql, useQuery } from "@apollo/client";
 import PropTypes from "prop-types";
 import { Image } from "@crystallize/reactjs-components";
 

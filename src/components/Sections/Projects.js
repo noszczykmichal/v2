@@ -1,8 +1,7 @@
-/* eslint-disable no-lone-blocks */
-/* eslint-disable prettier/prettier */
 import "./Projects.scss";
 import { projects } from "../../utils/config";
 import Icon from "../Layout/Icon/Icon";
+import ProjectPic from "../UI/ProjectPic/ProjectPic";
 
 function Projects() {
   return (
@@ -40,7 +39,9 @@ function Projects() {
               </div>
             </div>
             <div className="project-image">
-              <a href={project.liveUrl}>dsd</a>
+              <a href={project.liveUrl}>
+                <ProjectPic imageSrc={project.imagePath} />
+              </a>
             </div>
           </li>
         ))}
@@ -50,12 +51,3 @@ function Projects() {
 }
 
 export default Projects;
-
-{
-  /* <div className="project-image">
-<a href={external ? external : github ? github : "#"}>
-  <GatsbyImage image={image} alt={title} className="img" />
-</a>
-</div>
-</StyledProject> */
-}
