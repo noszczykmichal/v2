@@ -7,9 +7,9 @@ function Projects() {
   return (
     <section>
       <h2 className="numbered-heading">Some Things I&apos;ve Built</h2>
-      <ul>
+      <ul className="projects-list">
         {projects.map((project) => (
-          <li key={project.title}>
+          <li key={project.title} className="styled-project">
             <div className="project-content">
               <div>
                 <p className="project-overline">Featured Project</p>
