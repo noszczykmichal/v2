@@ -39,8 +39,11 @@ function Projects() {
               </div>
             </div>
             <div className="project-image">
-              <a href={project.liveUrl}>
-                <ProjectPic imageSrc={project.imagePath} />
+              <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                <ProjectPic
+                  imageSrc={project.imagePath}
+                  className="image-wrapper"
+                />
               </a>
             </div>
           </li>
