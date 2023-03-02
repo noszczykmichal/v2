@@ -82,10 +82,36 @@ export const projects = [
   {
     title: "Minimalistic-storefront",
     description:
-      'As the name suggests it is a mock-up page of an imaginary online shop, fetching data from  the  GraphQL endpoint. The  project consists of  three main  "pages": PLP(category page), PDP (product page) and Cart page.',
+      "As the name suggests, it is a mock-up page of an imaginary online shop, fetching data from the GraphQL endpoint. The project consists of three main 'pages': the PLP (category page), the PDP (product page), and the Cart page.",
     liveUrl: "https://minimalistic-storefront.web.app/",
     repoUrl: "https://github.com/noszczykmichal/minimalistic-storefront",
     imagePath: "/minimalistic-storefront",
-    tech: ["Reactjs", "Redux", "GraphQl", "Heroku", "ESLint", "Prettier"],
+    tech: [
+      "React",
+      "Redux",
+      "Redux Persist",
+      "GraphQl",
+      "Interweave",
+      "Heroku",
+    ],
+  },
+  {
+    title: "Book4u",
+    description:
+      "A web app that uses the Project Gutenberg API for browsing the PG catalogue. At the start, the app loads a set of books ordered by the number of downloads, but you can add your own search criteria to find something that matches your taste.",
+    liveUrl: "https://book4u-b0a2a.web.app/",
+    repoUrl: "https://github.com/noszczykmichal/book4u",
+    imagePath: "/book4u",
+    tech: ["React", "React Context", "React Transition Group", "Rest Api"],
+  },
+  {
+    title: "Meetup",
+    description:
+      "A small app for creating and managing meetups built with React. It is based on one of the projects I have done while learning React, and later enriched with new functionalities by me.",
+    liveUrl: "https://meetup-with-class-components.web.app/",
+    repoUrl:
+      "https://github.com/noszczykmichal/meetup-app__with-class-based-components",
+    imagePath: "/meetup",
+    tech: ["React", "React Context", "Redux", "Firebase", "ESLint", "Prettier"],
   },
 ];
