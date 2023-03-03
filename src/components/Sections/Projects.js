@@ -1,15 +1,45 @@
+import { useEffect, useRef } from "react";
+import ScrollReveal from "scrollreveal";
+
 import "./Projects.scss";
-import { projects } from "../../utils/config";
+import { projects, srConfig } from "../../utils/config";
 import Icon from "../Layout/Icon/Icon";
 import ProjectPic from "../UI/ProjectPic/ProjectPic";
+import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 
 function Projects() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotionRef = useRef(prefersReducedMotion);
+  const revealTitle = useRef();
+  const revealProjects = useRef([]);
+
+  useEffect(() => {
+    if (prefersReducedMotionRef.current) {
+      return undefined;
+    }
+
+    ScrollReveal().reveal(revealTitle.current, srConfig());
+    revealProjects.current.forEach((ref, index) =>
+      ScrollReveal().reveal(ref, srConfig(index * 100)),
+    );
+
+    return () => {};
+  }, []);
+
   return (
     <section>
-      <h2 className="numbered-heading">Some Things I&apos;ve Built</h2>
+      <h2 className="numbered-heading" ref={revealTitle}>
+        Some Things I&apos;ve Built
+      </h2>
       <ul className="projects-list">
-        {projects.map((project) => (
-          <li key={project.title} className="styled-project">
+        {projects.map((project, index) => (
+          <li
+            key={project.title}
+            className="styled-project"
+            ref={(el) => {
+              revealProjects.current[index] = el;
+            }}
+          >
             <div className="project-content">
               <div>
                 <p className="project-overline">Featured Project</p>
@@ -25,13 +55,20 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="project-links">
-                  <a href={project.repoUrl} aria-label="GitHub Link">
+                  <a
+                    href={project.repoUrl}
+                    aria-label="GitHub Link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Icon name="Github" />
                   </a>
                   <a
                     href={project.liveUrl}
                     aria-label="External Link"
                     className="external"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <Icon name="External" />
                   </a>
