@@ -29,7 +29,7 @@ function Skills() {
   }, []);
 
   return (
-    <section className="skills" ref={revealContainer}>
+    <section id="skills" ref={revealContainer}>
       <h2 className="numbered-heading">What I&apos;ve Learnt</h2>
       <div className="tab">
         <div className="tab__list">
