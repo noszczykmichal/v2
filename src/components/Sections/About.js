@@ -19,7 +19,7 @@ function About() {
   }, []);
 
   return (
-    <section className="about" ref={revealContainer}>
+    <section className="about" id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
       <div className="inner-wrapper">
         <div>

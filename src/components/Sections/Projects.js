@@ -27,7 +27,7 @@ function Projects() {
   }, []);
 
   return (
-    <section>
+    <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
         Some Things I&apos;ve Built
       </h2>

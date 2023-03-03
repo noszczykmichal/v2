@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./NavigationItem.scss";
@@ -21,7 +20,7 @@ function NavigationItem({ animStart, classes, url, delayFactor, children }) {
         ref={nodeRef}
         style={{ transitionDelay: `${delayFactor * 100}ms` }}
       >
-        <Link to={url}>{children}</Link>
+        <a href={url}>{children}</a>
       </li>
     </CSSTransition>
   );
