@@ -55,10 +55,7 @@ function About() {
             Grasp my resume through the button at the navigation bar, or check
             my skills and recent projects.
           </p>
-          <p>
-            Feel free to reach out to me at any time through LinkedIn or via the
-            contact form at the bottom of the page.{" "}
-          </p>
+          <p>Feel free to reach out to me at any time through LinkedIn.</p>
         </div>
         <StyledPic imagePath="/my-image" />
       </div>

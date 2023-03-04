@@ -175,3 +175,18 @@
     }
   }
 }
+
+.github-invitation {
+  padding-top: 200px;
+  width: 100%;
+  text-align: center;
+  h3 {
+    font-size: $fz-heading;
+  }
+
+  a {
+    font-family: $font-mono;
+    font-size: $fz-sm;
+    @include inlineLink;
+  }
+}

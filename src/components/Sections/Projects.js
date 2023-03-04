@@ -12,6 +12,7 @@ function Projects() {
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
   const revealTitle = useRef();
   const revealProjects = useRef([]);
+  const revealInvitation = useRef();
 
   useEffect(() => {
     if (prefersReducedMotionRef.current) {
@@ -19,6 +20,10 @@ function Projects() {
     }
 
     ScrollReveal().reveal(revealTitle.current, srConfig());
+    ScrollReveal().reveal(
+      revealInvitation.current,
+      srConfig((projects.length + 2) * 100),
+    );
     revealProjects.current.forEach((ref, index) =>
       ScrollReveal().reveal(ref, srConfig(index * 100)),
     );
@@ -86,6 +91,16 @@ function Projects() {
           </li>
         ))}
       </ul>
+      <div className="github-invitation" ref={revealInvitation}>
+        <h3> Want To See More Of My Projects? </h3>
+        <a
+          href="https://github.com/noszczykmichal"
+          target="_blank"
+          rel="noreferrer"
+        >
+          visit my Github
+        </a>
+      </div>
     </section>
   );
 }

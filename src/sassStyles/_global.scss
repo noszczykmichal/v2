@@ -16,6 +16,7 @@ body {
   margin: 0;
   color: $lightest-grey;
   background-color: $navy;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $font-sans;
