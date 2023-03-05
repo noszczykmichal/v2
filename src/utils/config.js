@@ -12,6 +12,7 @@ export const email = "noszczykmichal@wp.pl";
 export const socialMedia = [
   { name: "Github", url: "https://github.com/noszczykmichal" },
   { name: "Linkedin", url: "https://www.linkedin.com/in/michal-noszczyk/" },
+  { name: "Codewars", url: "https://www.codewars.com/users/noszczykmichal" },
 ];
 
 export const navDelay = 1000;
