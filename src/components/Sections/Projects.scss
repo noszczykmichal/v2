@@ -36,10 +36,29 @@
       }
 
       .project-links {
-        justify-content: flex-end;
-        margin-left: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 10px;
         margin-right: -10px;
+        color: $lightest-grey;
+        justify-content: flex-end;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          @include svg-inLine;
+
+          &.external {
+            svg {
+              margin-top: -4px;
+            }
+          }
+        }
       }
+
       .project-image {
         grid-column: 1 / 8;
       }
@@ -88,29 +107,6 @@
         margin: 0 20px 5px 0;
         color: $light-grey;
         font-size: $fz-xs;
-      }
-    }
-
-    .project-links {
-      display: flex;
-      align-items: center;
-      position: relative;
-      margin-top: 10px;
-      margin-left: -10px;
-      color: $lightest-grey;
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        @include svg-inLine;
-
-        &.external {
-          svg {
-            margin-top: -4px;
-          }
-        }
       }
     }
 

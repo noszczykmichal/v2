@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+import Codewars from "./Icons/Codewars";
 import CommunicationSkills from "./Icons/CommunicationSkills";
 import CSS from "./Icons/CSS";
 import EN from "./Icons/EN";
@@ -23,6 +24,8 @@ import DefaultIcon from "./Icons/DefaultIcon";
 function Icon({ name }) {
   const renderSwitch = (name) => {
     switch (name) {
+      case "Codewars":
+        return <Codewars />;
       case "CommunicationSkills":
         return <CommunicationSkills />;
       case "CSS":
