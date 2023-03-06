@@ -63,50 +63,6 @@
   }
 }
 
-//Element
-@mixin layoutLine() {
-  &::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: $light-grey;
-  }
-}
-
-@mixin inlineLink() {
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  color: $green;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $green;
-    outline: 0;
-    &:after {
-      width: 100%;
-    }
-    & > * {
-      color: $green;
-      transition: $defaultTransition;
-    }
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    position: relative;
-    bottom: 0.37em;
-    background-color: $green;
-    transition: $defaultTransition;
-    opacity: 0.5;
-  }
-}
-
 @mixin svg-with-animation() {
   svg {
     display: block;
@@ -165,5 +121,71 @@
     &:focus {
       color: $green;
     }
+  }
+}
+
+//Elements
+@mixin layoutLine() {
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: $light-grey;
+  }
+}
+
+@mixin inlineLink() {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: $green;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+    outline: 0;
+    &:after {
+      width: 100%;
+    }
+    & > * {
+      color: $green;
+      transition: $defaultTransition;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: $green;
+    transition: $defaultTransition;
+    opacity: 0.5;
+  }
+}
+
+@mixin bigButton {
+  color: $green;
+  background-color: transparent;
+  border: 1px solid $green;
+  border-radius: $custom-border-radius;
+  padding: 1.25rem 1.75rem;
+  font-size: $fz-sm;
+  font-family: $font-mono;
+  line-height: 1;
+  text-decoration: none;
+  transition: $defaultTransition;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $green-tint;
+    outline: none;
+  }
+  &:after {
+    display: none !important;
   }
 }
