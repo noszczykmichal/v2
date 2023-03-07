@@ -15,7 +15,11 @@ function TransitionWrapper({ animStart, classes, delayFactor, children }) {
       classNames={classes}
       nodeRef={nodeRef}
     >
-      <div style={{ transitionDelay: `${delayFactor + 1}00ms` }} ref={nodeRef}>
+      <div
+        style={{ transitionDelay: `${delayFactor + 1}00ms` }}
+        ref={nodeRef}
+        className="transition-wrapper"
+      >
         {children}
       </div>
     </CSSTransition>

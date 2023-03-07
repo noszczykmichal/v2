@@ -3,3 +3,11 @@
 @include fadeUp;
 @include fade;
 @include fadeDown;
+
+aside {
+  .transition-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

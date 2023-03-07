@@ -21,6 +21,7 @@
       border: 0px;
       border-left: 2px solid $lightest-navy;
       text-align: left;
+      cursor: pointer;
       &[is-active="true"] {
         color: $green;
       }
