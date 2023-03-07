@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Image } from "@crystallize/reactjs-components";
 
 import "./StyledPic.scss";
-import useCrystallize from "../../../utils/useCrystallize";
+import useCrystallize from "../../../utils/hooks/useCrystallize";
 
 function StyledPic({ imagePath }) {
   const { data } = useCrystallize(imagePath);

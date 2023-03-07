@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { TransitionGroup } from "react-transition-group";
 
-import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import { srConfig, skillsTabs } from "../../utils/config";
 import tabHeight from "../../sassStyles/_variables.scss";
 import Icon from "../Layout/Icon/Icon";

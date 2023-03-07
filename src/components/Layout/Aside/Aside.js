@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import PropTypes from "prop-types";
 
-import usePrefersReducedMotion from "../../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 import { loaderDelay } from "../../../utils/config";
 import TransitionWrapper from "../../UI/TransitionWrapper/TransitionWrapper";
 import "./Aside.scss";

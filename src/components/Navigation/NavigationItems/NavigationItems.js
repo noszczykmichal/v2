@@ -5,7 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import NavigationItem from "./NavigationItem/NavigationItem";
 import "./NavigationItems.scss";
 import { navLinks, loaderDelay } from "../../../utils/config";
-import usePrefersReducedMotion from "../../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 
 function NavigationItems() {
   const [isMounted, setIsMounted] = useState(false);
