@@ -1,0 +1,11 @@
+@import "../../sassStyles/variables";
+
+footer {
+  text-align: center;
+  padding: 15px;
+  p {
+    font-family: $font-mono;
+    font-size: $fz-xxs;
+    line-height: 1;
+  }
+}
