@@ -1,14 +1,28 @@
 @import "../../../sassStyles/variables";
 
 .toolbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: 0;
+  z-index: 11;
   height: $toolbar-height;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: rgba(10, 25, 47, 0.85);
-  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  backdrop-filter: blur(10px);
+  transition: $defaultTransition;
+}
+
+.with-box-shadow {
+  height: $toolbar-scroll-height;
+  transform: translateY(0px);
+  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px $navy-shadow;
+}
+
+.toolbar--hide {
+  height: $toolbar-scroll-height;
+  transform: translateY(calc($toolbar-scroll-height * -1));
+  box-shadow: 0 10px 30px -10px $navy-shadow;
 }
