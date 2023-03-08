@@ -5,7 +5,7 @@ import "./Projects.scss";
 import { projects, srConfig } from "../../utils/config";
 import Icon from "../Layout/Icon/Icon";
 import ProjectPic from "../UI/ProjectPic/ProjectPic";
-import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 
 function Projects() {
   const prefersReducedMotion = usePrefersReducedMotion();

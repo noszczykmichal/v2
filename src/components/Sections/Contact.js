@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 import { email, srConfig } from "../../utils/config";
-import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import "./Contact.scss";
 
 function Contact() {

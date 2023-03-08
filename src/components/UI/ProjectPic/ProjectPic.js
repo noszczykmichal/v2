@@ -1,7 +1,7 @@
 import { Image } from "@crystallize/reactjs-components";
 import PropTypes from "prop-types";
 
-import useCrystallize from "../../../utils/useCrystallize";
+import useCrystallize from "../../../utils/hooks/useCrystallize";
 
 function ProjectPic({ imageSrc, className }) {
   const { data } = useCrystallize(imageSrc);

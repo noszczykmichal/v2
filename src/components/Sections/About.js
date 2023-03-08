@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 import "./About.scss";
-import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
+import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import { srConfig } from "../../utils/config";
 import StyledPic from "../UI/StyledPic/StyledPic";
 
