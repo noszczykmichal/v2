@@ -5,6 +5,7 @@ import { InMemoryCache, ApolloClient, ApolloProvider } from "@apollo/client";
 
 import App from "./App";
 import "./index.scss";
+import { UIContextProvider } from "./store/uiContext";
 
 const client = new ApolloClient({
   uri: "https://api.crystallize.com/noszczykmichal/catalogue/",
@@ -15,9 +16,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <UIContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </UIContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
 );
