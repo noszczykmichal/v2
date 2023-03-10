@@ -5,6 +5,7 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import useScrollDirection from "../../../utils/hooks/useScrollDirection";
 import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 import useHandleScroll from "../../../utils/hooks/useHandleScroll";
+import Hamburger from "../Hamburger";
 
 function Toolbar() {
   const scrollDirection = useScrollDirection("down");
@@ -32,6 +33,7 @@ function Toolbar() {
   return (
     <header className={attachedClasses}>
       <NavigationItems />
+      <Hamburger />
     </header>
   );
 }
