@@ -1,4 +1,4 @@
-@import "../../sassStyles/variables";
+@import "../../../sassStyles/variables";
 
 .hamburger {
   position: relative;
@@ -6,6 +6,7 @@
   padding: 15px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
   transition-timing-function: linear;
   transition-duration: 0.15s;
   transition-property: opacity, filter;

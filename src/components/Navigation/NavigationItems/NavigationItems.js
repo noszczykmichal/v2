@@ -26,7 +26,7 @@ function NavigationItems() {
   }, []);
 
   return (
-    <nav className="desktop-navigation">
+    <div className="desktop-navigation">
       {prefersReducedMotion ? (
         <>
           <ol className="navigation-items">
@@ -78,7 +78,7 @@ function NavigationItems() {
           </TransitionGroup>
         </>
       )}
-    </nav>
+    </div>
   );
 }
 
