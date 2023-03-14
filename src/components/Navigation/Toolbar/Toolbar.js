@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState, useEffect, useRef } from "react";
 
 import "./Toolbar.scss";
@@ -8,6 +6,7 @@ import useScrollDirection from "../../../utils/hooks/useScrollDirection";
 import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 import useHandleScroll from "../../../utils/hooks/useHandleScroll";
 import Hamburger from "../Hamburger/Hamburger";
+import SideNav from "../SideNav/SideNav";
 
 function Toolbar() {
   const scrollDirection = useScrollDirection("down");
@@ -15,12 +14,6 @@ function Toolbar() {
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
   const [attachedClasses, setAttachedClasses] = useState("toolbar");
   const isTop = useHandleScroll();
-
-  const myhandler = (e) => {
-    console.log(e.target);
-    // document.body.classList.toggle("blur");
-    // menuOpenHandler();
-  };
 
   useEffect(() => {
     if (prefersReducedMotionRef.current) {
@@ -39,9 +32,12 @@ function Toolbar() {
   }, [scrollDirection, isTop]);
 
   return (
-    <nav className={attachedClasses} onClick={myhandler}>
+    <nav className={attachedClasses}>
       <NavigationItems />
-      <Hamburger />
+      <div>
+        <Hamburger />
+        <SideNav />
+      </div>
     </nav>
   );
 }
