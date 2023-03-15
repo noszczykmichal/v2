@@ -1,12 +1,8 @@
 @import "../../../sassStyles/variables";
 @import "../../../sassStyles/mixins";
 
-.desktop-navigation {
-  display: none;
-}
-
 @media (min-width: 768px) {
-  .desktop-navigation {
+  .navigation {
     display: flex;
     justify-content: flex-end;
     align-items: center;

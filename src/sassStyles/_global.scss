@@ -46,6 +46,13 @@ body {
   counter-reset: section;
 }
 
+body.blur {
+  overflow: hidden;
+  main {
+    filter: blur(5px) brightness(0.7);
+  }
+}
+
 section {
   margin: 0 auto;
   padding: 100px 0;

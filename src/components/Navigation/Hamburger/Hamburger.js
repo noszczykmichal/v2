@@ -1,10 +1,9 @@
-import { useContext } from "react";
-
 import "./Hamburger.scss";
-import UIContext from "../../store/uiContext";
+import useMobileNav from "../../../utils/hooks/useMobileNav";
 
 function Hamburger() {
-  const { menuOpen, menuOpenHandler } = useContext(UIContext);
+  const { menuOpen, onClickHandler } = useMobileNav();
+
   let attachedClasses = ["box__inner", "box__inner--side-nav-closed"];
 
   if (menuOpen) {
@@ -12,7 +11,7 @@ function Hamburger() {
   }
 
   return (
-    <button type="button" className="hamburger" onClick={menuOpenHandler}>
+    <button type="button" className="hamburger" onClick={onClickHandler}>
       <div className="hamburger__box">
         <div className={attachedClasses.join(" ")} />
       </div>

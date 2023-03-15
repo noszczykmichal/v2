@@ -1,9 +1,9 @@
-@import "../../../sassStyles/variables";
+@import "../../sassStyles/variables";
 
-.toolbar {
+.styled-header {
   position: fixed;
   top: 0;
-  z-index: 11;
+  z-index: 14;
   height: $toolbar-height;
   width: 100%;
   display: flex;
@@ -21,8 +21,20 @@
   box-shadow: 0 10px 30px -10px $navy-shadow;
 }
 
-.toolbar--hide {
+.header--hidden {
   height: $toolbar-scroll-height;
   transform: translateY(calc($toolbar-scroll-height * -1));
   box-shadow: 0 10px 30px -10px $navy-shadow;
+}
+
+.main-nav {
+  .navigation {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .navigation {
+      display: flex;
+    }
+  }
 }

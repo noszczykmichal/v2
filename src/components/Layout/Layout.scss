@@ -1,10 +1,17 @@
 main {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-
+  // transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   .content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+
+// .styled {
+//   filter: blur(5px) brightness(0.7);
+//   & > * {
+//     pointer-events: none;
+//   }
+// }
