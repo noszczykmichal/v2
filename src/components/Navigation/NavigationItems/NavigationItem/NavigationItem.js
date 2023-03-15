@@ -1,12 +1,19 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 
 import "./NavigationItem.scss";
 import { loaderDelay } from "../../../../utils/config";
+import UIContext from "../../../../store/uiContext";
 
 function NavigationItem({ animStart, classes, url, delayFactor, children }) {
   const nodeRef = useRef();
+  const { linkClickHandler } = useContext(UIContext);
+
+  const onLinkClick = () => {
+    document.body.classList.toggle("blur");
+    linkClickHandler();
+  };
 
   return (
     <CSSTransition
@@ -20,7 +27,9 @@ function NavigationItem({ animStart, classes, url, delayFactor, children }) {
         ref={nodeRef}
         style={{ transitionDelay: `${delayFactor * 100}ms` }}
       >
-        <a href={url}>{children}</a>
+        <a href={url} onClick={onLinkClick}>
+          {children}
+        </a>
       </li>
     </CSSTransition>
   );

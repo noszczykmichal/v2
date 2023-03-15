@@ -178,6 +178,7 @@
   font-family: $font-mono;
   line-height: 1;
   text-decoration: none;
+  cursor: pointer;
   transition: $defaultTransition;
   &:hover,
   &:focus,

@@ -1,6 +1,6 @@
 @import "../../sassStyles/variables";
 
-.navigation {
+.styled-header {
   position: fixed;
   top: 0;
   z-index: 14;
@@ -21,8 +21,20 @@
   box-shadow: 0 10px 30px -10px $navy-shadow;
 }
 
-.navigation--hidden {
+.header--hidden {
   height: $toolbar-scroll-height;
   transform: translateY(calc($toolbar-scroll-height * -1));
   box-shadow: 0 10px 30px -10px $navy-shadow;
+}
+
+.main-nav {
+  .navigation {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .navigation {
+      display: flex;
+    }
+  }
 }

@@ -26,7 +26,7 @@ function NavigationItems() {
   }, []);
 
   return (
-    <div className="desktop-navigation">
+    <div className="navigation">
       {prefersReducedMotion ? (
         <>
           <ol className="navigation-items">

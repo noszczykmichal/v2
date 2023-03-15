@@ -21,11 +21,11 @@ function Navigation() {
     }
 
     if (isTop) {
-      setAttachedClasses("navigation");
+      setAttachedClasses("styled-header");
     } else if (!isTop && scrollDirection === "up") {
-      setAttachedClasses(["navigation", "with-box-shadow"].join(" "));
+      setAttachedClasses(["styled-header", "with-box-shadow"].join(" "));
     } else if (!isTop && scrollDirection === "down") {
-      setAttachedClasses(["navigation", "navigation--hidden"].join(" "));
+      setAttachedClasses(["styled-header", "header--hidden"].join(" "));
     }
 
     return () => {};
@@ -33,7 +33,7 @@ function Navigation() {
 
   return (
     <header className={attachedClasses}>
-      <nav>
+      <nav className="main-nav">
         <NavigationItems />
         <div>
           <Hamburger />

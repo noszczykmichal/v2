@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const UIContext = createContext({
   menuOpen: false,
   menuOpenHandler: () => {},
+  linkClickHandler: () => {},
 });
 
 export function UIContextProvider({ children }) {
@@ -13,10 +14,15 @@ export function UIContextProvider({ children }) {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  const linkClickHandler = () => {
+    setIsMenuOpen(false);
+  };
+
   const context = useMemo(
     () => ({
       menuOpen: isMenuOpen,
       menuOpenHandler,
+      linkClickHandler,
     }),
     [isMenuOpen],
   );
