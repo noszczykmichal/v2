@@ -1,6 +1,6 @@
-@import "../../../sassStyles/variables";
+@import "../../sassStyles/variables";
 
-.toolbar {
+.navigation {
   position: fixed;
   top: 0;
   z-index: 14;
@@ -21,7 +21,7 @@
   box-shadow: 0 10px 30px -10px $navy-shadow;
 }
 
-.toolbar--hide {
+.navigation--hidden {
   height: $toolbar-scroll-height;
   transform: translateY(calc($toolbar-scroll-height * -1));
   box-shadow: 0 10px 30px -10px $navy-shadow;

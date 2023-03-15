@@ -10,7 +10,6 @@ export function UIContextProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuOpenHandler = () => {
-    // document.body.classList.toggle("blur");
     setIsMenuOpen((prevState) => !prevState);
   };
 
