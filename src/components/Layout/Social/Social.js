@@ -5,7 +5,7 @@ import "./Social.scss";
 
 function Social() {
   return (
-    <Aside>
+    <Aside orientation="left">
       <ul className="social-icons">
         {socialMedia.map((social) => (
           <li key={social.name}>

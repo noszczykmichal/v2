@@ -4,7 +4,7 @@ import "./Email.scss";
 
 function Email() {
   return (
-    <Aside>
+    <Aside orientation="right">
       <div className="email-container">
         <a href={`mailto:${email}`}>{email}</a>
       </div>
