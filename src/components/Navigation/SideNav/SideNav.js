@@ -1,5 +1,6 @@
 import { createPortal } from "react-dom";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import "./SideNav.scss";
 import Backdrop from "../../UI/Backdrop/Backdrop";
@@ -8,16 +9,25 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 
 function SideNav() {
   const { menuOpen: isMenuOpen } = useContext(UIContext);
-
+  const nodeRef = useRef();
   return (
     <>
       {isMenuOpen &&
         createPortal(<Backdrop />, document.getElementById("overlay-root"))}
-      <aside className={isMenuOpen ? "side-nav" : "none"}>
-        <nav>
-          <NavigationItems />
-        </nav>
-      </aside>
+      <CSSTransition
+        in={isMenuOpen}
+        timeout={300}
+        classNames="sideNav"
+        nodeRef={nodeRef}
+        mountOnEnter
+        unmountOnExit
+      >
+        <aside className="side-nav" ref={nodeRef}>
+          <nav>
+            <NavigationItems />
+          </nav>
+        </aside>
+      </CSSTransition>
     </>
   );
 }
