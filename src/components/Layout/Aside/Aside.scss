@@ -1,8 +1,27 @@
 @import "../../../sassStyles/mixins";
 @import "../../../sassStyles/variables";
+
 .social {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 40px;
+  }
+}
+
+.left {
+  left: 20px;
+  @media (min-width: 1080px) {
+    left: 40px;
+  }
+}
+
+.right {
+  right: 20px;
+  @media (min-width: 1080px) {
+    right: 40px;
+  }
 }

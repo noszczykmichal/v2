@@ -10,11 +10,9 @@ function Layout({ children }) {
   return (
     <>
       <Navigation />
-      <main>
-        <Social />
-        <div className="content-wrapper">{children}</div>
-        <Email />
-      </main>
+      <Social />
+      <Email />
+      <main>{children}</main>
       <Footer />
     </>
   );

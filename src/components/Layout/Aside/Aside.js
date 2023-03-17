@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-useless-fragment */
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import PropTypes from "prop-types";
@@ -8,10 +7,11 @@ import { loaderDelay } from "../../../utils/config";
 import TransitionWrapper from "../../UI/TransitionWrapper/TransitionWrapper";
 import "./Aside.scss";
 
-function Aside({ children }) {
+function Aside({ orientation, children }) {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
+  const attachedClasses = ["social", orientation];
 
   useEffect(() => {
     if (prefersReducedMotionRef.current) {
@@ -24,9 +24,9 @@ function Aside({ children }) {
   }, []);
 
   return (
-    <aside className="social">
+    <aside className={attachedClasses.join(" ")}>
       {prefersReducedMotion ? (
-        <>{children}</>
+        children
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
@@ -41,6 +41,7 @@ function Aside({ children }) {
 }
 
 Aside.propTypes = {
+  orientation: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
