@@ -12,9 +12,7 @@ function Layout({ children }) {
       <Navigation />
       <Social />
       <Email />
-      <main>
-        <div className="content-wrapper">{children}</div>
-      </main>
+      <main>{children}</main>
       <Footer />
     </>
   );

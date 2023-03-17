@@ -1,11 +1,14 @@
 @import "../../../sassStyles/mixins";
 @import "../../../sassStyles/variables";
+
 .social {
   display: none;
   @media (min-width: 768px) {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: fixed;
     bottom: 0;
+    width: 40px;
   }
 }
 

@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/jsx-no-useless-fragment */
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import PropTypes from "prop-types";
@@ -30,7 +26,7 @@ function Aside({ orientation, children }) {
   return (
     <aside className={attachedClasses.join(" ")}>
       {prefersReducedMotion ? (
-        <>{children}</>
+        children
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
@@ -45,6 +41,7 @@ function Aside({ orientation, children }) {
 }
 
 Aside.propTypes = {
+  orientation: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
