@@ -1,3 +1,4 @@
+/* eslint-disable import/no-duplicates */
 /* eslint-disable react/jsx-no-useless-fragment */
 import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
@@ -6,6 +7,7 @@ import { TransitionGroup } from "react-transition-group";
 import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import { srConfig, skillsTabs } from "../../utils/config";
 import tabHeight from "../../sassStyles/_variables.scss";
+import tabWidth from "../../sassStyles/_variables.scss";
 import Icon from "../Layout/Icon/Icon";
 import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 import "./Skills.scss";
@@ -13,7 +15,8 @@ import "./Skills.scss";
 function Skills() {
   const [isMounted, setIsMounted] = useState(false);
   const [activeTabId, setActiveTabId] = useState(0);
-  const tab = tabHeight.tabHeight;
+  const heightOfTab = tabHeight.tabHeight;
+  const widthOfTab = tabWidth.tabWidth;
   const revealContainer = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -29,7 +32,7 @@ function Skills() {
   }, []);
 
   return (
-    <section id="skills" ref={revealContainer}>
+    <section className="skills" id="skills" ref={revealContainer}>
       <h2 className="numbered-heading">What I&apos;ve Learnt</h2>
       <div className="tab">
         <div className="tab__list">
@@ -47,7 +50,12 @@ function Skills() {
           <div
             className="tab__highlight"
             style={{
-              transform: `translateY(${activeTabId * tab.substring(0, 2)}px)`,
+              transform:
+                window.innerWidth <= 600
+                  ? `translateX(${activeTabId * widthOfTab.substring(0, 3)}px)`
+                  : `translateY(${
+                      activeTabId * heightOfTab.substring(0, 2)
+                    }px)`,
             }}
           />
         </div>
