@@ -40,8 +40,10 @@ $toolbar-height: 100px;
 $toolbar-scroll-height: 70px;
 $custom-border-radius: 4px;
 $tab-height: 42px;
+$tab-width: 120px;
 $hamburger-width: 30px;
 
 :export {
   tabHeight: $tab-height;
+  tabWidth: $tab-width;
 }
