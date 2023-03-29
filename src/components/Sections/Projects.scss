@@ -78,20 +78,6 @@
           margin-left: 0;
           margin-right: -10px;
         }
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          @include svg-inLine;
-
-          &.external {
-            svg {
-              margin-top: -4px;
-            }
-          }
-        }
       }
 
       .project-image {
@@ -202,8 +188,21 @@
       display: flex;
       align-items: center;
       position: relative;
-      margin-top: 10px;
       margin-left: -10px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        @include svg-inLine;
+
+        &.external {
+          svg {
+            margin-top: -4px;
+          }
+        }
+      }
     }
 
     .project-image {

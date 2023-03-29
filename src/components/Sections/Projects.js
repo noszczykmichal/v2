@@ -49,7 +49,9 @@ function Projects() {
               <div>
                 <p className="project-overline">Featured Project</p>
                 <h3 className="project-title">
-                  <a href={project.liveUrl}>{project.title}</a>
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                    {project.title}
+                  </a>
                 </h3>
                 <div className="project-description">
                   <p>{project.description}</p>
