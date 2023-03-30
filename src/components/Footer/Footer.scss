@@ -1,9 +1,45 @@
+@import "../../sassStyles//mixins";
 @import "../../sassStyles/variables";
 
 footer {
   text-align: center;
   padding: 15px;
+
+  .icons-container {
+    margin: 0 auto 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    .social-icons--footer {
+      list-style: none;
+      width: 50vw;
+      max-width: 187px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          padding: 10px;
+          @include svg-inLine;
+          .special-styling {
+            fill: #a8b2d1;
+            &:hover,
+            &:focus {
+              fill: $green !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
   p {
+    padding: 10px;
     font-family: $font-mono;
     font-size: $fz-xxs;
     line-height: 1;

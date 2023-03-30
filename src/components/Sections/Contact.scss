@@ -3,8 +3,11 @@
 
 .contact {
   max-width: 600px;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   text-align: center;
+  @media (min-width: 768px) {
+    margin: 0 auto 100px;
+  }
 
   .overline {
     display: block;
