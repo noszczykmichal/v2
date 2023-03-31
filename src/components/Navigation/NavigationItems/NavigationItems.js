@@ -65,14 +65,15 @@ function NavigationItems() {
                 classNames="fadedown"
                 nodeRef={buttonRef}
               >
-                <button
-                  type="button"
+                <a
+                  href="./cv_michal_noszczyk.pdf"
+                  target="_blank"
                   className="resume-button"
                   style={{ transitionDelay: `${navLinks.length * 100}ms` }}
                   ref={buttonRef}
                 >
                   Resume
-                </button>
+                </a>
               </CSSTransition>
             )}
           </TransitionGroup>
