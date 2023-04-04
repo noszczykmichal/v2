@@ -63,19 +63,17 @@ function Skills() {
         <div className="tab__panels">
           {prefersReducedMotion ? (
             <div className="tab__panel">
-              <div className="container">
-                {skillsTabs[activeTabId].contents.map((element) => (
-                  <div key={element.subHeading}>
-                    <Icon name={element.iconName} animate={false} />
-                    <p>{element.subHeading}</p>
-                  </div>
-                ))}
-              </div>
+              {skillsTabs[activeTabId].contents.map((element) => (
+                <div key={element.subHeading}>
+                  <Icon name={element.iconName} animate={false} />
+                  <p>{element.subHeading}</p>
+                </div>
+              ))}
             </div>
           ) : (
-            <TransitionGroup className="tab__panel">
+            <TransitionGroup component={null}>
               <>
-                <div className="container">
+                <div className="tab__panel">
                   {skillsTabs[activeTabId].contents.map((element, index) => (
                     <TransitionWrapper
                       animStart={isMounted}
