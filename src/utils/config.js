@@ -64,10 +64,10 @@ export const skillsTabs = [
     name: "Tools",
     contents: [
       { iconName: "Git", subHeading: "Git" },
-      { iconName: "VisualStudioCode", subHeading: "Visual Studio Code" },
       { iconName: "Jira", subHeading: "Jira" },
       { iconName: "Slack", subHeading: "Slack" },
       { iconName: "GoogleWorkspace", subHeading: "Google Workspace" },
+      { iconName: "VisualStudioCode", subHeading: "Visual Studio Code" },
     ],
   },
   {
