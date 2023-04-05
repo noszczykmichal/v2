@@ -1,17 +1,24 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useRef, useContext } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
 
 import NavigationItem from "./NavigationItem/NavigationItem";
 import "./NavigationItems.scss";
 import { navLinks, loaderDelay } from "../../../utils/config";
 import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
+import UIContext from "../../../store/uiContext";
 
 function NavigationItems() {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
   const buttonRef = useRef();
+  const { linkClickHandler } = useContext(UIContext);
+
+  const onLinkClick = () => {
+    document.body.classList.toggle("blur");
+    linkClickHandler();
+  };
 
   useEffect(() => {
     if (prefersReducedMotionRef.current) {
@@ -32,13 +39,20 @@ function NavigationItems() {
           <ol className="navigation-items">
             {navLinks.map((navLink) => (
               <li className="navigation-item" key={navLink.name}>
-                <Link to={navLink.url}>{navLink.name}</Link>
+                <a href={navLink.url} onClick={onLinkClick}>
+                  {navLink.name}
+                </a>
               </li>
             ))}
           </ol>
-          <button type="button" className="resume-button">
+          <Link
+            to="./cv_michal_noszczyk.pdf"
+            target="_blank"
+            className="resume-button"
+            download
+          >
             Resume
-          </button>
+          </Link>
         </>
       ) : (
         <>
@@ -65,15 +79,16 @@ function NavigationItems() {
                 classNames="fadedown"
                 nodeRef={buttonRef}
               >
-                <a
-                  href="./cv_michal_noszczyk.pdf"
+                <Link
+                  to="./cv_michal_noszczyk.pdf"
                   target="_blank"
                   className="resume-button"
                   style={{ transitionDelay: `${navLinks.length * 100}ms` }}
                   ref={buttonRef}
+                  download
                 >
                   Resume
-                </a>
+                </Link>
               </CSSTransition>
             )}
           </TransitionGroup>

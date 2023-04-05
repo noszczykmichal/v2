@@ -12,7 +12,7 @@ function Navigation() {
   const scrollDirection = useScrollDirection("down");
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
-  const [attachedClasses, setAttachedClasses] = useState("toolbar");
+  const [attachedClasses, setAttachedClasses] = useState("styled-header");
   const isTop = useHandleScroll();
 
   useEffect(() => {
