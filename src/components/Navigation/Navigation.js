@@ -7,6 +7,7 @@ import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import useHandleScroll from "../../utils/hooks/useHandleScroll";
 import Hamburger from "./Hamburger/Hamburger";
 import SideNav from "./SideNav/SideNav";
+import Logo from "./Logo/Logo";
 
 function Navigation() {
   const scrollDirection = useScrollDirection("down");
@@ -34,8 +35,9 @@ function Navigation() {
   return (
     <header className={attachedClasses}>
       <nav className="main-nav">
+        <Logo />
         <NavigationItems />
-        <div>
+        <div className="side-nav-container">
           <Hamburger />
           <SideNav />
         </div>

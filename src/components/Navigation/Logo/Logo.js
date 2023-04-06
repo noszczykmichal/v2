@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
-import "./Hamburger.scss";
-import useMobileNav from "../../../utils/hooks/useMobileNav";
 import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 
-function Hamburger() {
-  const { menuOpen, onClickHandler } = useMobileNav();
-  const [isMounted, setIsMounted] = useState(false);
+import LogoSVG from "./LogoSVG/LogoSVG";
+import "./Logo.scss";
+
+function Logo() {
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
+  const [isMounted, setIsMounted] = useState(false);
   const nodeRef = useRef();
 
   useEffect(() => {
@@ -26,18 +25,8 @@ function Hamburger() {
     };
   }, []);
 
-  let attachedClasses = ["box__inner", "box__inner--side-nav-closed"];
-
-  if (menuOpen) {
-    attachedClasses = ["box__inner", "box__inner--side-nav-open"];
-  }
-
   return prefersReducedMotion ? (
-    <button type="button" className="hamburger" onClick={onClickHandler}>
-      <div className="hamburger__box">
-        <div className={attachedClasses.join(" ")} />
-      </div>
-    </button>
+    <LogoSVG />
   ) : (
     <TransitionGroup component={null}>
       {isMounted && (
@@ -47,20 +36,11 @@ function Hamburger() {
           classNames="fade"
           nodeRef={nodeRef}
         >
-          <button
-            type="button"
-            className="hamburger"
-            onClick={onClickHandler}
-            ref={nodeRef}
-          >
-            <div className="hamburger__box">
-              <div className={attachedClasses.join(" ")} />
-            </div>
-          </button>
+          <LogoSVG ref={nodeRef} />
         </CSSTransition>
       )}
     </TransitionGroup>
   );
 }
 
-export default Hamburger;
+export default Logo;
