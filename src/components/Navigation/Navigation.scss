@@ -12,6 +12,7 @@
   background-color: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(10px);
   transition: $defaultTransition;
+  padding: 0 25px;
 }
 
 .with-box-shadow {
@@ -28,8 +29,19 @@
 }
 
 .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
   .navigation {
     display: none;
+  }
+
+  .side-nav-container {
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {

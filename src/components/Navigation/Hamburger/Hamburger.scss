@@ -1,8 +1,10 @@
 @import "../../../sassStyles/variables";
+@import "../../../sassStyles//mixins";
 
 .hamburger {
   position: relative;
   z-index: 15;
+  margin-right: -15px;
   padding: 15px;
   border: 0;
   background-color: transparent;
@@ -82,3 +84,5 @@
     display: none;
   }
 }
+
+@include fade;
