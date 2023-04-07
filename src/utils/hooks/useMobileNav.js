@@ -3,11 +3,11 @@ import { useContext } from "react";
 import UIContext from "../../store/uiContext";
 
 function useMobileNav() {
-  const { menuOpen, menuOpenHandler } = useContext(UIContext);
+  const { menuOpen, menuToggleHandler } = useContext(UIContext);
 
   const onClickHandler = () => {
     document.body.classList.toggle("blur");
-    menuOpenHandler();
+    menuToggleHandler();
   };
 
   return { menuOpen, onClickHandler };

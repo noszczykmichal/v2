@@ -3,26 +3,26 @@ import PropTypes from "prop-types";
 
 const UIContext = createContext({
   menuOpen: false,
-  menuOpenHandler: () => {},
-  linkClickHandler: () => {},
+  menuToggleHandler: () => {},
+  closeSideNavHandler: () => {},
 });
 
 export function UIContextProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuOpenHandler = () => {
+  const menuToggleHandler = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  const linkClickHandler = () => {
+  const closeSideNavHandler = () => {
     setIsMenuOpen(false);
   };
 
   const context = useMemo(
     () => ({
       menuOpen: isMenuOpen,
-      menuOpenHandler,
-      linkClickHandler,
+      menuToggleHandler,
+      closeSideNavHandler,
     }),
     [isMenuOpen],
   );

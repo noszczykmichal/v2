@@ -8,11 +8,11 @@ import UIContext from "../../../../store/uiContext";
 
 function NavigationItem({ animStart, classes, url, delayFactor, children }) {
   const nodeRef = useRef();
-  const { linkClickHandler } = useContext(UIContext);
+  const { closeSideNavHandler } = useContext(UIContext);
 
   const onLinkClick = () => {
-    document.body.classList.toggle("blur");
-    linkClickHandler();
+    document.body.classList.remove("blur");
+    closeSideNavHandler();
   };
 
   return (
