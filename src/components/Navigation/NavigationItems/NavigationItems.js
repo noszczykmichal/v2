@@ -13,11 +13,11 @@ function NavigationItems() {
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
   const buttonRef = useRef();
-  const { linkClickHandler } = useContext(UIContext);
+  const { closeSideNavHandler } = useContext(UIContext);
 
   const onLinkClick = () => {
-    document.body.classList.toggle("blur");
-    linkClickHandler();
+    document.body.classList.remove("blur");
+    closeSideNavHandler();
   };
 
   useEffect(() => {

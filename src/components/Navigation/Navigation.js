@@ -29,7 +29,7 @@ function Navigation() {
       setAttachedClasses(["styled-header", "header--hidden"].join(" "));
     }
 
-    return () => {};
+    return undefined;
   }, [scrollDirection, isTop]);
 
   return (

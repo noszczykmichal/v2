@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { useContext, useRef } from "react";
+import { useEffect, useContext, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import "./SideNav.scss";
@@ -8,8 +8,24 @@ import UIContext from "../../../store/uiContext";
 import NavigationItems from "../NavigationItems/NavigationItems";
 
 function SideNav() {
-  const { menuOpen: isMenuOpen } = useContext(UIContext);
+  const { menuOpen: isMenuOpen, closeSideNavHandler } = useContext(UIContext);
+  const closeSideNavRef = useRef(closeSideNavHandler);
   const nodeRef = useRef();
+
+  useEffect(() => {
+    const onResize = (e) => {
+      if (e.currentTarget.innerWidth > 768) {
+        document.body.classList.remove("blur");
+        closeSideNavRef.current();
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   return (
     <>
       {isMenuOpen &&
