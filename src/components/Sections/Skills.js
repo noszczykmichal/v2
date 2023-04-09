@@ -17,6 +17,10 @@ function Skills() {
   const [activeTabId, setActiveTabId] = useState(0);
   const heightOfTab = tabHeight.tabHeight;
   const widthOfTab = tabWidth.tabWidth;
+  const highlightTransform =
+    window.innerWidth <= 600
+      ? `translateX(${activeTabId * widthOfTab.substring(0, 3)}px)`
+      : `translateY(${activeTabId * heightOfTab.substring(0, 2)}px)`;
   const revealContainer = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -50,12 +54,7 @@ function Skills() {
           <div
             className="tab__highlight"
             style={{
-              transform:
-                window.innerWidth <= 600
-                  ? `translateX(${activeTabId * widthOfTab.substring(0, 3)}px)`
-                  : `translateY(${
-                      activeTabId * heightOfTab.substring(0, 2)
-                    }px)`,
+              transform: `${highlightTransform}`,
             }}
           />
         </div>
