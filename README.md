@@ -9,10 +9,10 @@
 </p>
 <p align="center">
   Previous iteration:
-  <a href="https://noszczykmichal.github.io/portfolio/index.html" target="_blank">v1</a>,
+  <a href="https://noszczykmichal.github.io/portfolio/index.html" target="_blank">v1</a>
 </p>
 
-![demo](https://github.com/noszczykmichal/v2/blob/main/images/demo.png)
+![demo](https://github.com/noszczykmichal/v2/blob/main/images/demo.PNG)
 
 ## 🚨 Forking this repo
 
