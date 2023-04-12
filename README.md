@@ -16,7 +16,7 @@
 
 ## 🚨 Forking this repo
 
-Feel free to fork this repo for creating your own personal website, however please link back to my page [michalnoszczyk.com](https://michalnoszczyk.com/) or to this [repo](https://github.com/noszczykmichal/v2). Please also note that I've built this repo on the basis of design created orignally by [Brittany Chiang](https://brittanychiang.com).
+Feel free to fork this repo for creating your own personal website, however please link back to my page [michalnoszczyk.com](https://michalnoszczyk.com/) or to this [repo](https://github.com/noszczykmichal/v2). Please also note that I've built this repo on the basis of design created originally by [Brittany Chiang](https://brittanychiang.com).
 
 ## 🛠 Running this project locally
 
@@ -43,3 +43,16 @@ Feel free to fork this repo for creating your own personal website, however plea
    ```sh
    $npm start
    ```
+
+## 🎨 Color Reference
+
+| Color         | Hex                                                                |
+| ------------- | ------------------------------------------------------------------ |
+| Navy          | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
+| Light Navy    | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
+| Lightest Navy | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
+| Grey          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
+| Light Grey    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
+| Lightest Grey | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
+| White         | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
+| Green         | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
