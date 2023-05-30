@@ -21,7 +21,7 @@ function Footer() {
           ))}
         </ul>
       </div>
-      <p>Build by Michal Noszczyk</p>
+      <p>Built by Michal Noszczyk</p>
     </footer>
   );
 }
