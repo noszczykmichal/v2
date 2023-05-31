@@ -91,6 +91,7 @@ export const projects = [
       "React",
       "Redux",
       "Redux Persist",
+      "Typescript",
       "GraphQl",
       "Interweave",
       "Heroku",

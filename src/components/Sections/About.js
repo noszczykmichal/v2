@@ -49,7 +49,8 @@ function About() {
             </a>{" "}
             on building, updating, and maintaining its websites. Yet, in my free
             time, I devote every moment to acquiring new skills and mastering
-            the ones I currently have by building my own projects.
+            the ones I currently have by building my own projects. At the
+            moment, I am practicing the use of TypeScript in React projects.
           </p>
           <p>
             Grasp my resume through the button at the navigation bar, or check
