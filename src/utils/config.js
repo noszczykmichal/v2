@@ -43,6 +43,7 @@ export const skillsTabs = [
       { iconName: "Html", subHeading: "HTML5" },
       { iconName: "CSS", subHeading: "CSS3" },
       { iconName: "JavaScript", subHeading: "JavaScript" },
+      { iconName: "TypeScript", subHeading: "TypeScript" },
       { iconName: "Sass", subHeading: "Sass" },
       { iconName: "React", subHeading: "React" },
     ],

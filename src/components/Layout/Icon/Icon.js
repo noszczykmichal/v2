@@ -18,6 +18,7 @@ import Sass from "./Icons/Sass";
 import Slack from "./Icons/Slack";
 import Teamwork from "./Icons/Teamwork";
 import ToDoList from "./Icons/ToDoList";
+import TypeScript from "./Icons/TypeScript";
 import VisualStudioCode from "./Icons/VisualStudioCode";
 import DefaultIcon from "./Icons/DefaultIcon";
 
@@ -60,6 +61,8 @@ function Icon({ name }) {
         return <Teamwork />;
       case "ToDoList":
         return <ToDoList />;
+      case "TypeScript":
+        return <TypeScript />;
       case "VisualStudioCode":
         return <VisualStudioCode />;
       default:
