@@ -46,7 +46,7 @@ function NavigationItems() {
             ))}
           </ol>
           <Link
-            to="./cv_michal_noszczyk.pdf"
+            to="./CV_Michal_Noszczyk.pdf"
             target="_blank"
             className="resume-button"
             download
@@ -80,7 +80,7 @@ function NavigationItems() {
                 nodeRef={buttonRef}
               >
                 <Link
-                  to="./cv_michal_noszczyk.pdf"
+                  to="./CV_Michal_Noszczyk.pdf"
                   target="_blank"
                   className="resume-button"
                   style={{ transitionDelay: `${navLinks.length * 100}ms` }}
