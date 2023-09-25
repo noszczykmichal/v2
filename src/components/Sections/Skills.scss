@@ -5,10 +5,9 @@
   max-width: 700px;
   .tab {
     display: block;
-    // min-height: 310px;
+
     @media (min-width: 600px) {
       display: flex;
-      // height: auto;
     }
 
     .tab__list {
@@ -124,6 +123,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin: 8px 0;
           @include svg-no-animation;
           p {
             margin-top: 0.8rem;

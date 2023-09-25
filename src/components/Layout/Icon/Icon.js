@@ -9,6 +9,7 @@ import Github from "./Icons/Github";
 import GoogleWorkspace from "./Icons/GoogleWorkspace";
 import Html from "./Icons/Html";
 import JavaScript from "./Icons/JavaScript";
+import Jest from "./Icons/Jest";
 import Jira from "./Icons/Jira";
 import LikeToLearn from "./Icons/LikeToLearn";
 import Linkedin from "./Icons/Linkedin";
@@ -17,6 +18,7 @@ import React from "./Icons/React";
 import Sass from "./Icons/Sass";
 import Slack from "./Icons/Slack";
 import Teamwork from "./Icons/Teamwork";
+import TestingLibrary from "./Icons/TestingLibrary";
 import ToDoList from "./Icons/ToDoList";
 import TypeScript from "./Icons/TypeScript";
 import VisualStudioCode from "./Icons/VisualStudioCode";
@@ -43,6 +45,8 @@ function Icon({ name }) {
         return <Html />;
       case "JavaScript":
         return <JavaScript />;
+      case "Jest":
+        return <Jest />;
       case "Jira":
         return <Jira />;
       case "LikeToLearn":
@@ -59,6 +63,8 @@ function Icon({ name }) {
         return <Slack />;
       case "Teamwork":
         return <Teamwork />;
+      case "TestingLibrary":
+        return <TestingLibrary />;
       case "ToDoList":
         return <ToDoList />;
       case "TypeScript":
