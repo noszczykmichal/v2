@@ -6,8 +6,8 @@ import { TransitionGroup } from "react-transition-group";
 
 import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import { srConfig, skillsTabs } from "../../utils/config";
-import tabHeight from "../../sassStyles/_variables.scss";
-import tabWidth from "../../sassStyles/_variables.scss";
+import tabHeight from "../../sassStyles/_variables.module.scss";
+import tabWidth from "../../sassStyles/_variables.module.scss";
 import Icon from "../Layout/Icon/Icon";
 import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
 import "./Skills.scss";
