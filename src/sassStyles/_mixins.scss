@@ -1,6 +1,6 @@
 @import "./variables.module";
 
-//Animations
+/* Animations */
 @mixin fadeDown() {
   .fadedown-enter {
     opacity: 0.01;
@@ -44,7 +44,7 @@
   }
 }
 
-//Styles
+/* Styles */
 @mixin columnAside() {
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@
   }
 }
 
-//Elements
+/* Elements */
 @mixin layoutLine() {
   &::after {
     content: "";
