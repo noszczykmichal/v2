@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 export const navLinks = [
   { name: "About", url: "#about" },
@@ -121,3 +121,8 @@ export const projects = [
     tech: ["React", "React Context", "Redux", "Firebase", "ESLint", "Prettier"],
   },
 ];
+
+export const linkAnalyticsHandler = (source, name) => () => {
+  const analytics = getAnalytics();
+  logEvent(analytics, source, { name });
+};

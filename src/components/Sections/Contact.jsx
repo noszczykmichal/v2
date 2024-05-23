@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
-import { email, srConfig } from "../../utils/config";
+import { email, srConfig, linkAnalyticsHandler } from "../../utils/config";
 import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 import "./Contact.scss";
 
@@ -33,7 +33,11 @@ function Contact() {
         back to you!
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
+      <a
+        className="email-link"
+        href={`mailto:${email}`}
+        onClick={linkAnalyticsHandler("contact_section", "say_hello_button")}
+      >
         Say Hello
       </a>
     </section>

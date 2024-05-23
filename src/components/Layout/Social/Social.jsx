@@ -1,6 +1,6 @@
 import Aside from "../Aside/Aside";
 import Icon from "../Icon/Icon";
-import { socialMedia } from "../../../utils/config";
+import { socialMedia, linkAnalyticsHandler } from "../../../utils/config";
 import "./Social.scss";
 
 function Social() {
@@ -14,6 +14,7 @@ function Social() {
               aria-label={social.name}
               target="_blank"
               rel="noreferrer"
+              onClick={linkAnalyticsHandler("side_navigation", social.name)}
             >
               <Icon name={social.name} />
             </a>
