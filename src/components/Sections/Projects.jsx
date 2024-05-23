@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
 
-import "./Projects.scss";
-import { projects, srConfig } from "../../utils/config";
+import { projects, srConfig, linkAnalyticsHandler } from "../../utils/config";
 import Icon from "../Layout/Icon/Icon";
 import ProjectPic from "../UI/ProjectPic/ProjectPic";
 import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
+import "./Projects.scss";
 
 function Projects() {
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -67,6 +67,7 @@ function Projects() {
                     aria-label="GitHub Link"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={linkAnalyticsHandler(project.title, "github_link")}
                   >
                     <Icon name="Github" />
                   </a>
@@ -76,6 +77,10 @@ function Projects() {
                     className="external"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={linkAnalyticsHandler(
+                      project.title,
+                      "live_url_link",
+                    )}
                   >
                     <Icon name="External" />
                   </a>
@@ -83,7 +88,12 @@ function Projects() {
               </div>
             </div>
             <div className="project-image">
-              <a href={project.liveUrl} target="_blank" rel="noreferrer">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={linkAnalyticsHandler(project.title, "project_image")}
+              >
                 <ProjectPic
                   imageSrc={project.imagePath}
                   className="image-wrapper"

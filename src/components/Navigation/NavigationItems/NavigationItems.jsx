@@ -3,10 +3,14 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 
 import NavigationItem from "./NavigationItem/NavigationItem";
-import "./NavigationItems.scss";
-import { navLinks, loaderDelay } from "../../../utils/config";
+import {
+  navLinks,
+  loaderDelay,
+  linkAnalyticsHandler,
+} from "../../../utils/config";
 import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 import UIContext from "../../../store/uiContext";
+import "./NavigationItems.scss";
 
 function NavigationItems() {
   const [isMounted, setIsMounted] = useState(false);
@@ -18,6 +22,11 @@ function NavigationItems() {
   const onLinkClick = () => {
     document.body.classList.remove("blur");
     closeSideNavHandler();
+  };
+
+  const resumeEventHandler = () => {
+    const analytics = getAnalytics();
+    logEvent(analytics, "resume_download");
   };
 
   useEffect(() => {
@@ -49,6 +58,7 @@ function NavigationItems() {
             to="./cv_michal_noszczyk.pdf"
             target="_blank"
             className="resume-button"
+            onClick={linkAnalyticsHandler("navigation", "resume_button")}
             download
           >
             Resume
@@ -85,6 +95,7 @@ function NavigationItems() {
                   className="resume-button"
                   style={{ transitionDelay: `${navLinks.length * 100}ms` }}
                   ref={buttonRef}
+                  onClick={linkAnalyticsHandler("navigation", "resume_button")}
                   download
                 >
                   Resume
