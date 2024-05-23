@@ -24,11 +24,6 @@ function NavigationItems() {
     closeSideNavHandler();
   };
 
-  const resumeEventHandler = () => {
-    const analytics = getAnalytics();
-    logEvent(analytics, "resume_download");
-  };
-
   useEffect(() => {
     if (prefersReducedMotionRef.current) {
       return undefined;
