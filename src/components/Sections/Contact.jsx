@@ -35,7 +35,7 @@ function Contact() {
 
       <a
         className="email-link"
-        href={`mailto:${email}`}
+        href={`mailto:${email}?subject=Re: Say Hello`}
         onClick={linkAnalyticsHandler("contact_section", "say_hello_button")}
       >
         Say Hello
