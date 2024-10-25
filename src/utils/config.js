@@ -111,14 +111,13 @@ export const projects = [
     tech: ["React", "React Context", "React Transition Group", "Rest Api"],
   },
   {
-    title: "Meetup",
+    title: "Password Generator",
     description:
-      "A small app for creating and managing meetups built with React. It is based on one of the projects I have done while learning React, and later enriched with new functionalities by me.",
-    liveUrl: "https://meetup-with-class-components.web.app/",
-    repoUrl:
-      "https://github.com/noszczykmichal/meetup-app__with-class-based-components",
-    imagePath: "/meetup",
-    tech: ["React", "React Context", "Redux", "Firebase", "ESLint", "Prettier"],
+      "A small app for generating passwords. It allows the creation of passwords consisting of uppercase and lowercase letters, numbers, and symbols.",
+    liveUrl: "https://password-generator-6c2c5.web.app/",
+    repoUrl: "https://github.com/noszczykmichal/password_generator",
+    imagePath: "/password-generator",
+    tech: ["React", "React Transition Group", "Preact/Signals-React", "Vite"],
   },
 ];
 
