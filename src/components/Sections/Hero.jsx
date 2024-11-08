@@ -23,15 +23,15 @@ function About() {
   const one = <h1>Hi, my name is </h1>;
   const two = <h2 className="heading--big">Michal Noszczyk.</h2>;
   const three = (
-    <h3 className="heading--big">
-      I&apos;m an aspiring Junior Frontend Developer.
-    </h3>
+    <h3 className="heading--big">I&apos;m a Frontend Developer.</h3>
   );
   const four = (
     <p className="subheading">
-      I&apos;m passionate about learning new things. Every free moment, I spend
-      on practising my skills, building my own projects and having fun while
-      programming.
+      Passionate about building beautiful, functional web apps. Currently at
+      <a href="https://publicisgroupe.pl/" target="_blank" rel="noreferrer">
+        Publicis
+      </a>
+      , developing solutions for the medical industry.
     </p>
   );
 
@@ -42,9 +42,13 @@ function About() {
       {prefersReducedMotion ? (
         <>
           {content.map((element) => {
-            const key = element.props.children.substring(
-              element.props.children.length - 4,
-            );
+            const key = element.props.children.substring
+              ? element.props.children.substring(
+                  element.props.children.length - 4,
+                )
+              : element.props.children[0].substring(
+                  element.props.children[0].substring.length - 1,
+                );
             return <div key={key}>{element}</div>;
           })}
         </>
@@ -52,9 +56,13 @@ function About() {
         <TransitionGroup component={null}>
           {isMounted &&
             content.map((element, index) => {
-              const key = element.props.children.substring(
-                element.props.children.length - 4,
-              );
+              const key = element.props.children.substring
+                ? element.props.children.substring(
+                    element.props.children.length - 4,
+                  )
+                : element.props.children[0].substring(
+                    element.props.children[0].substring.length - 1,
+                  );
 
               return (
                 <TransitionWrapper
