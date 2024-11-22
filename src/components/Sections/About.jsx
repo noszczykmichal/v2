@@ -24,22 +24,23 @@ function About() {
       <div className="inner-wrapper">
         <div>
           <p>
-            Hello! My name is Michal, and I am aspiring Junior Frontend
-            Developer. For 9 years, I&apos;ve worked in various financial
-            institutions, assisting entrepreneurs in acquiring financing for
-            their businesses. At some point, I&apos;ve decided I want to start
-            something new and here I am.
+            Hello! My name is Michal, and I'm a Junior Frontend Developer. Back
+            in the past, for nine years, I was connected with the financial
+            sector, which greatly impacted my career and allowed me to develop
+            soft skills.
           </p>
           <p>
-            Currently, I work at{" "}
+            Though my experience in the IT sector covers only two companies, I
+            have already had the privilege of working for big brands. Previously
+            at{" "}
             <a
               href="https://cheil.uk/?languages=en&regionNm=United+Kingdom"
               target="_blank"
               rel="noreferrer"
             >
-              Cheil Poland
-            </a>{" "}
-            as a Web Publisher, where I collaborate with{" "}
+              Cheil
+            </a>
+            , I had the opportunity to work for{" "}
             <a
               href="https://www.samsung.com/uk/"
               target="_blank"
@@ -47,16 +48,28 @@ function About() {
             >
               Samsung
             </a>{" "}
-            on building, updating, and maintaining its websites. Yet, in my free
-            time, I devote every moment to acquiring new skills and mastering
-            the ones I currently have by building my own projects. At the
-            moment, I am practicing the use of TypeScript in React projects.
+            and took part in the promotion of their most critical cutting-edge
+            products in the tech industry. At{" "}
+            <a
+              href="https://publicisgroupe.pl/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Publicis
+            </a>
+            , in my current position, I work for a big player in the medical
+            industry, where I take part in developing solutions used by
+            thousands of specialists all over the world.
           </p>
           <p>
-            Grasp my resume through the button at the navigation bar, or check
-            my skills and recent projects.
+            In the meantime, I also contribute to internal projects, where I am
+            developing an automation tool that is used daily by peer developers
+            to speed up their work.
           </p>
-          <p>Feel free to reach out to me at any time through LinkedIn.</p>
+          <p>
+            If you feel I might be a good match for your team, grab my resume
+            through the navigation bar or check my skills and recent projects.
+          </p>
         </div>
         <StyledPic imagePath="/my-image" />
       </div>

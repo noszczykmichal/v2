@@ -27,7 +27,7 @@ function About() {
   );
   const four = (
     <p className="subheading">
-      Passionate about building beautiful, functional web apps. Currently at
+      Passionate about building beautiful, functional web apps. Currently at{" "}
       <a href="https://publicisgroupe.pl/" target="_blank" rel="noreferrer">
         Publicis
       </a>
