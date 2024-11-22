@@ -43,7 +43,6 @@ export const skillsTabs = [
       { iconName: "Html", subHeading: "HTML5" },
       { iconName: "CSS", subHeading: "CSS3" },
       { iconName: "JavaScript", subHeading: "JavaScript" },
-
       { iconName: "TypeScript", subHeading: "TypeScript" },
       { iconName: "Sass", subHeading: "Sass" },
       { iconName: "React", subHeading: "React" },
@@ -57,7 +56,6 @@ export const skillsTabs = [
       { iconName: "Teamwork", subHeading: "Like to work in a team" },
       { iconName: "LikeToLearn", subHeading: "Like to learn" },
       { iconName: "ToDoList", subHeading: "Know how to work under pressure" },
-
       {
         iconName: "CommunicationSkills",
         subHeading: "Good at communication skills",
