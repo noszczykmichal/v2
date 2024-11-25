@@ -24,10 +24,10 @@ function About() {
       <div className="inner-wrapper">
         <div>
           <p>
-            Hello! My name is Michal, and I'm a Junior Frontend Developer. Back
-            in the past, for nine years, I was connected with the financial
-            sector, which greatly impacted my career and allowed me to develop
-            soft skills.
+            Hello! My name is Michal, and I'm a Frontend Developer. Back in the
+            past, for nine years, I was connected with the financial sector,
+            which greatly impacted my career and allowed me to develop soft
+            skills.
           </p>
           <p>
             Though my experience in the IT sector covers only two companies, I
