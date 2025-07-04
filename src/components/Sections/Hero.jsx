@@ -27,11 +27,9 @@ function About() {
   );
   const four = (
     <p className="subheading">
-      Passionate about building beautiful, functional web apps. Currently at{" "}
-      <a href="https://publicisgroupe.pl/" target="_blank" rel="noreferrer">
-        Publicis
-      </a>
-      , developing solutions for the medical industry.
+      Passionate about crafting seamless digital experiences. Currently working
+      as a <span>freelance developer</span>, helping clients bring their ideas
+      to life.
     </p>
   );
 
