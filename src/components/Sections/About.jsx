@@ -25,14 +25,14 @@ function About() {
         <div>
           <p>
             Hello! My name is Michal, and I'm a Frontend Developer. Back in the
-            past, for nine years, I was connected with the financial sector,
-            which greatly impacted my career and allowed me to develop soft
-            skills.
+            past, for nine years, I was connected with the financial sector.
+            During that time, I developed soft skills that I now apply in my
+            tech career.
           </p>
           <p>
-            Though my experience in the IT sector covers only two companies, I
-            have already had the privilege of working for big brands. Previously
-            at{" "}
+            Since the start of my journey in the IT sector, I’ve already had the
+            chance to work with major brands such as Cheil and Publicis. I
+            started at&nbsp;
             <a
               href="https://cheil.uk/?languages=en&regionNm=United+Kingdom"
               target="_blank"
@@ -40,16 +40,16 @@ function About() {
             >
               Cheil
             </a>
-            , I had the opportunity to work for{" "}
+            , where I had the opportunity to work on projects for&nbsp;
             <a
               href="https://www.samsung.com/uk/"
               target="_blank"
               rel="noreferrer"
             >
               Samsung
-            </a>{" "}
-            and took part in the promotion of their most critical cutting-edge
-            products in the tech industry. At{" "}
+            </a>
+            , taking part in the promotion of their most critical, cutting-edge
+            products. Later, at&nbsp;
             <a
               href="https://publicisgroupe.pl/"
               target="_blank"
@@ -57,18 +57,26 @@ function About() {
             >
               Publicis
             </a>
-            , in my current position, I work for a big player in the medical
-            industry, where I take part in developing solutions used by
-            thousands of specialists all over the world.
+            , I contributed to a project for&nbsp;
+            <a
+              href="https://www.pfizer.co.uk/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Pfizer
+            </a>
+            , helping to develop solutions used by thousands of specialists
+            around the world.
           </p>
           <p>
-            In the meantime, I also contribute to internal projects, where I am
-            developing an automation tool that is used daily by peer developers
-            to speed up their work.
+            Most recently, as a freelance developer, I’ve been supporting
+            clients in building seamless digital experiences and ensuring the
+            successful delivery of applications.
           </p>
           <p>
-            If you feel I might be a good match for your team, grab my resume
-            through the navigation bar or check my skills and recent projects.
+            If you feel I might be a good match for your team, feel free to grab
+            my resume from the navigation bar or check out my skills and recent
+            projects.
           </p>
         </div>
         <StyledPic imagePath="/my-image" />
