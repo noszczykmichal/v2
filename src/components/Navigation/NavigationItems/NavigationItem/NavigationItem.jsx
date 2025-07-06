@@ -2,11 +2,17 @@ import { useRef, useContext } from "react";
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 
-import "./NavigationItem.scss";
-import { loaderDelay } from "../../../../utils/config";
-import UIContext from "../../../../store/uiContext";
+import { loaderDelay } from "@/utils/config";
+import UIContext from "@/store/uiContext";
+import "@/components/Navigation/NavigationItems/NavigationItem/NavigationItem.scss";
 
-function NavigationItem({ animStart, classes, url, delayFactor, children }) {
+export default function NavigationItem({
+  animStart,
+  classes,
+  url,
+  delayFactor,
+  children,
+}) {
   const nodeRef = useRef();
   const { closeSideNavHandler } = useContext(UIContext);
 
@@ -42,5 +48,3 @@ NavigationItem.propTypes = {
   delayFactor: PropTypes.number.isRequired,
   children: PropTypes.string.isRequired,
 };
-
-export default NavigationItem;

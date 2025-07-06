@@ -1,4 +1,4 @@
-function Teamwork() {
+export default function Teamwork() {
   return (
     <svg
       version="1.1"
@@ -22,5 +22,3 @@ function Teamwork() {
     </svg>
   );
 }
-
-export default Teamwork;

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { Image } from "@crystallize/reactjs-components";
 
-import "./StyledPic.scss";
-import useCrystallize from "../../../utils/hooks/useCrystallize";
+import "@/components/UI/StyledPic/StyledPic.scss";
+import useCrystallize from "@/utils/hooks/useCrystallize";
 
-function StyledPic({ imagePath }) {
+export default function StyledPic({ imagePath }) {
   const { data } = useCrystallize(imagePath);
 
   let imageFromCrystallize = {};
@@ -35,5 +35,3 @@ function StyledPic({ imagePath }) {
 StyledPic.propTypes = {
   imagePath: PropTypes.string.isRequired,
 };
-
-export default StyledPic;

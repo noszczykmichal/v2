@@ -5,9 +5,9 @@ import { InMemoryCache, ApolloClient, ApolloProvider } from "@apollo/client";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-import App from "./App";
-import { UIContextProvider } from "./store/uiContext";
-import "./index.scss";
+import App from "@/App";
+import { UIContextProvider } from "@/store/uiContext";
+import "@/index.scss";
 
 const client = new ApolloClient({
   uri: "https://api.crystallize.com/noszczykmichal/catalogue/",

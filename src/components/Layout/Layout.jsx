@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 
-import Navigation from "../Navigation/Navigation";
-import Social from "./Social/Social";
-import Email from "./Email/Email";
-import Footer from "../Footer/Footer";
-import "./Layout.scss";
+import Navigation from "@/components/Navigation/Navigation";
+import Social from "@/components/Layout/Social/Social";
+import Email from "@/components/Layout/Email/Email";
+import Footer from "@/components/Footer/Footer";
+import "@/components/Layout/Layout.scss";
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Navigation />
@@ -21,5 +21,3 @@ function Layout({ children }) {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

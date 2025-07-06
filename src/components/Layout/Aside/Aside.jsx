@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
 import PropTypes from "prop-types";
 
-import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
-import { loaderDelay } from "../../../utils/config";
-import TransitionWrapper from "../../UI/TransitionWrapper/TransitionWrapper";
-import "./Aside.scss";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import { loaderDelay } from "@/utils/config";
+import TransitionWrapper from "@/components/UI/TransitionWrapper/TransitionWrapper";
+import "@/components/Layout/Aside/Aside.scss";
 
-function Aside({ orientation, children }) {
+export default function Aside({ orientation, children }) {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -44,5 +44,3 @@ Aside.propTypes = {
   orientation: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
-
-export default Aside;

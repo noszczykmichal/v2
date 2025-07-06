@@ -1,4 +1,4 @@
-function EN() {
+export default function EN() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,5 +44,3 @@ function EN() {
     </svg>
   );
 }
-
-export default EN;

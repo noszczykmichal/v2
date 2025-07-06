@@ -4,15 +4,15 @@ import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { TransitionGroup } from "react-transition-group";
 
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
-import { srConfig, skillsTabs } from "../../utils/config";
-import tabHeight from "../../sassStyles/_variables.module.scss";
-import tabWidth from "../../sassStyles/_variables.module.scss";
-import Icon from "../Layout/Icon/Icon";
-import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
-import "./Skills.scss";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import { srConfig, skillsTabs } from "@/utils/config";
+import tabHeight from "@/sassStyles/_variables.module.scss";
+import tabWidth from "@/sassStyles/_variables.module.scss";
+import Icon from "@/components/Layout/Icon/Icon";
+import TransitionWrapper from "@/components/UI/TransitionWrapper/TransitionWrapper";
+import "@/components/Sections/Skills/Skills.scss";
 
-function Skills() {
+export default function Skills() {
   const [isMounted, setIsMounted] = useState(false);
   const [activeTabId, setActiveTabId] = useState(0);
   const heightOfTab = tabHeight.tabHeight;
@@ -93,5 +93,3 @@ function Skills() {
     </section>
   );
 }
-
-export default Skills;

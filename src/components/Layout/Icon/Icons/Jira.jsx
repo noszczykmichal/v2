@@ -1,4 +1,4 @@
-function Jira() {
+export default function Jira() {
   return (
     <svg
       fill="#000000"
@@ -13,5 +13,3 @@ function Jira() {
     </svg>
   );
 }
-
-export default Jira;

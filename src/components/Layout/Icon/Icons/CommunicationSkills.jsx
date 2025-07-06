@@ -1,4 +1,4 @@
-function CommunicationSkills() {
+export default function CommunicationSkills() {
   return (
     <svg
       fill="#000000"
@@ -12,5 +12,3 @@ function CommunicationSkills() {
     </svg>
   );
 }
-
-export default CommunicationSkills;

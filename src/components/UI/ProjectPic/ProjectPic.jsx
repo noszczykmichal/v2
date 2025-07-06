@@ -1,9 +1,9 @@
 import { Image } from "@crystallize/reactjs-components";
 import PropTypes from "prop-types";
 
-import useCrystallize from "../../../utils/hooks/useCrystallize";
+import useCrystallize from "@/utils/hooks/useCrystallize";
 
-function ProjectPic({ imageSrc, className }) {
+export default function ProjectPic({ imageSrc, className }) {
   const { data } = useCrystallize(imageSrc);
   let imageFromCrystallize = {};
 
@@ -30,5 +30,3 @@ ProjectPic.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
 };
-
-export default ProjectPic;

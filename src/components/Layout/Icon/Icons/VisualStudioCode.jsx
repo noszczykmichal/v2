@@ -1,4 +1,4 @@
-function VisualStudioCode() {
+export default function VisualStudioCode() {
   return (
     <svg
       fill="#000000"
@@ -11,5 +11,3 @@ function VisualStudioCode() {
     </svg>
   );
 }
-
-export default VisualStudioCode;

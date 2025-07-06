@@ -1,9 +1,9 @@
-import Aside from "../Aside/Aside";
-import Icon from "../Icon/Icon";
-import { socialMedia, linkAnalyticsHandler } from "../../../utils/config";
-import "./Social.scss";
+import Aside from "@/components/Layout/Aside/Aside";
+import Icon from "@/components/Layout/Icon/Icon";
+import { socialMedia, linkAnalyticsHandler } from "@/utils/config";
+import "@/components/Layout/Social/Social.scss";
 
-function Social() {
+export default function Social() {
   return (
     <Aside orientation="left">
       <ul className="social-icons">
@@ -24,5 +24,3 @@ function Social() {
     </Aside>
   );
 }
-
-export default Social;

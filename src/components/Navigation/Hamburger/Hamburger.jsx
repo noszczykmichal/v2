@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import "./Hamburger.scss";
-import useMobileNav from "../../../utils/hooks/useMobileNav";
-import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
+import useMobileNav from "@/utils/hooks/useMobileNav";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import "@/components/Navigation/Hamburger/Hamburger.scss";
 
-function Hamburger() {
+export default function Hamburger() {
   const { menuOpen, onClickHandler } = useMobileNav();
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -62,5 +62,3 @@ function Hamburger() {
     </TransitionGroup>
   );
 }
-
-export default Hamburger;

@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 
-import "./Navigation.scss";
-import NavigationItems from "./NavigationItems/NavigationItems";
-import useScrollDirection from "../../utils/hooks/useScrollDirection";
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
-import useHandleScroll from "../../utils/hooks/useHandleScroll";
-import Hamburger from "./Hamburger/Hamburger";
-import SideNav from "./SideNav/SideNav";
-import Logo from "./Logo/Logo";
+import NavigationItems from "@/components/Navigation/NavigationItems/NavigationItems";
+import useScrollDirection from "@/utils/hooks/useScrollDirection";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import useHandleScroll from "@/utils/hooks/useHandleScroll";
+import Hamburger from "@/components/Navigation/Hamburger/Hamburger";
+import SideNav from "@/components/Navigation/SideNav/SideNav";
+import Logo from "@/components/Navigation/Logo/Logo";
+import "@/components/Navigation/Navigation.scss";
 
-function Navigation() {
+export default function Navigation() {
   const scrollDirection = useScrollDirection("down");
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -45,5 +45,3 @@ function Navigation() {
     </header>
   );
 }
-
-export default Navigation;

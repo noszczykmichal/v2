@@ -2,10 +2,15 @@ import PropTypes from "prop-types";
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { loaderDelay } from "../../../utils/config";
-import "./TransitionWrapper.scss";
+import { loaderDelay } from "@/utils/config";
+import "@/components/UI/TransitionWrapper/TransitionWrapper.scss";
 
-function TransitionWrapper({ animStart, classes, delayFactor, children }) {
+export default function TransitionWrapper({
+  animStart,
+  classes,
+  delayFactor,
+  children,
+}) {
   const nodeRef = useRef();
 
   return (
@@ -36,5 +41,3 @@ TransitionWrapper.propTypes = {
 TransitionWrapper.defaultProps = {
   delayFactor: -1,
 };
-
-export default TransitionWrapper;

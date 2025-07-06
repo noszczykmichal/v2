@@ -1,4 +1,4 @@
-function Git() {
+export default function Git() {
   return (
     <svg
       width="800px"
@@ -17,5 +17,3 @@ function Git() {
     </svg>
   );
 }
-
-export default Git;

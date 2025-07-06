@@ -1,31 +1,31 @@
 import PropTypes from "prop-types";
 
-import Codewars from "./Icons/Codewars";
-import CommunicationSkills from "./Icons/CommunicationSkills";
-import CSS from "./Icons/CSS";
-import EN from "./Icons/EN";
-import Git from "./Icons/Git";
-import Github from "./Icons/Github";
-import GoogleWorkspace from "./Icons/GoogleWorkspace";
-import Html from "./Icons/Html";
-import JavaScript from "./Icons/JavaScript";
-import Jest from "./Icons/Jest";
-import Jira from "./Icons/Jira";
-import LikeToLearn from "./Icons/LikeToLearn";
-import Linkedin from "./Icons/Linkedin";
-import PL from "./Icons/PL";
-import React from "./Icons/React";
-import Sass from "./Icons/Sass";
-import Slack from "./Icons/Slack";
-import Teamwork from "./Icons/Teamwork";
-import TestingLibrary from "./Icons/TestingLibrary";
-import Tailwind from "./Icons/Tailwind";
-import ToDoList from "./Icons/ToDoList";
-import TypeScript from "./Icons/TypeScript";
-import VisualStudioCode from "./Icons/VisualStudioCode";
-import DefaultIcon from "./Icons/DefaultIcon";
+import Codewars from "@/components/Layout/Icon/Icons/Codewars";
+import CommunicationSkills from "@/components/Layout/Icon/Icons/CommunicationSkills";
+import CSS from "@/components/Layout/Icon/Icons/CSS";
+import EN from "@/components/Layout/Icon/Icons/EN";
+import Git from "@/components/Layout/Icon/Icons/Git";
+import Github from "@/components/Layout/Icon/Icons/Github";
+import GoogleWorkspace from "@/components/Layout/Icon/Icons/GoogleWorkspace";
+import Html from "@/components/Layout/Icon/Icons/Html";
+import JavaScript from "@/components/Layout/Icon/Icons/JavaScript";
+import Jest from "@/components/Layout/Icon/Icons/Jest";
+import Jira from "@/components/Layout/Icon/Icons/Jira";
+import LikeToLearn from "@/components/Layout/Icon/Icons/LikeToLearn";
+import Linkedin from "@/components/Layout/Icon/Icons/Linkedin";
+import PL from "@/components/Layout/Icon/Icons/PL";
+import React from "@/components/Layout/Icon/Icons/React";
+import Sass from "@/components/Layout/Icon/Icons/Sass";
+import Slack from "@/components/Layout/Icon/Icons/Slack";
+import Teamwork from "@/components/Layout/Icon/Icons/Teamwork";
+import TestingLibrary from "@/components/Layout/Icon/Icons/TestingLibrary";
+import Tailwind from "@/components/Layout/Icon/Icons/Tailwind";
+import ToDoList from "@/components/Layout/Icon/Icons/ToDoList";
+import TypeScript from "@/components/Layout/Icon/Icons/TypeScript";
+import VisualStudioCode from "@/components/Layout/Icon/Icons/VisualStudioCode";
+import DefaultIcon from "@/components/Layout/Icon/Icons/DefaultIcon";
 
-function Icon({ name }) {
+export default function Icon({ name }) {
   const renderSwitch = (name) => {
     switch (name) {
       case "Codewars":
@@ -84,5 +84,3 @@ function Icon({ name }) {
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
 };
-
-export default Icon;

@@ -1,5 +1,5 @@
-@import "./variables.module";
-@import "./mixins";
+@import "@/sassStyles/variables.module.scss";
+@import "@/sassStyles/mixins.scss";
 
 #root {
   display: flex;

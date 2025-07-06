@@ -1,8 +1,8 @@
-import Icon from "../Layout/Icon/Icon";
-import { socialMedia } from "../../utils/config";
-import "./Footer.scss";
+import Icon from "@/components/Layout/Icon/Icon";
+import { socialMedia } from "@/utils/config";
+import "@/components/Footer/Footer.scss";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer>
       <div className="icons-container">
@@ -25,5 +25,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;
