@@ -84,6 +84,23 @@ export const skillsTabs = [
 
 export const projects = [
   {
+    title: "Healthy Skin Clinic",
+    description:
+      "A fully functional website built for a small business in the wellness industry. The project leverages a modern frontend stack and integrates with a headless CMS (Sanity) to enable dynamic content updates.",
+    liveUrl: "https://www.olganoszczyk.pl/",
+    repoUrl: "https://github.com/noszczykmichal/nextjs-klinika-zdrowej-skory",
+    imagePath: "/healthy-skin-clinic",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Sanity",
+      "React Final Form",
+    ],
+  },
+  {
     title: "Minimalistic-storefront",
     description:
       "As the name suggests, it is a mock-up page of an imaginary online shop, fetching data from the GraphQL endpoint. The project consists of three main 'pages': the PLP (category page), the PDP (product page), and the Cart page.",
@@ -108,15 +125,6 @@ export const projects = [
     repoUrl: "https://github.com/noszczykmichal/book4u",
     imagePath: "/book4u",
     tech: ["React", "React Context", "React Transition Group", "Rest Api"],
-  },
-  {
-    title: "Password Generator",
-    description:
-      "A small app for generating passwords. It allows the creation of passwords consisting of uppercase and lowercase letters, numbers, and symbols.",
-    liveUrl: "https://password-generator-6c2c5.web.app/",
-    repoUrl: "https://github.com/noszczykmichal/password_generator",
-    imagePath: "/password-generator",
-    tech: ["React", "React Transition Group", "Preact/Signals-React", "Vite"],
   },
 ];
 
