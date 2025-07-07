@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
-import { email, srConfig, linkAnalyticsHandler } from "../../utils/config";
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
-import "./Contact.scss";
+import { email, srConfig, linkAnalyticsHandler } from "@/utils/config";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import "@/components/Sections/Contact/Contact.scss";
 
-function Contact() {
+export default function Contact() {
   const revealContainer = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -40,5 +40,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;

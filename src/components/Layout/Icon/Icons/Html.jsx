@@ -1,4 +1,4 @@
-function Html() {
+export default function Html() {
   return (
     <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>html5</title>
@@ -6,5 +6,3 @@ function Html() {
     </svg>
   );
 }
-
-export default Html;

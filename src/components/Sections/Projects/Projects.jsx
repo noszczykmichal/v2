@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
 
-import { projects, srConfig, linkAnalyticsHandler } from "../../utils/config";
-import Icon from "../Layout/Icon/Icon";
-import ProjectPic from "../UI/ProjectPic/ProjectPic";
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
-import "./Projects.scss";
+import { projects, srConfig, linkAnalyticsHandler } from "@/utils/config";
+import Icon from "@/components/Layout/Icon/Icon";
+import ProjectPic from "@/components/UI/ProjectPic/ProjectPic";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import "@/components/Sections/Projects/Projects.scss";
 
 function Projects() {
   const prefersReducedMotion = usePrefersReducedMotion();

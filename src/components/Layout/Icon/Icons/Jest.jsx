@@ -1,4 +1,4 @@
-function Jest() {
+export default function Jest() {
   return (
     <svg
       fill="#000000"
@@ -11,5 +11,3 @@ function Jest() {
     </svg>
   );
 }
-
-export default Jest;

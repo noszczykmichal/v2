@@ -1,4 +1,4 @@
-function GoogleWorkspace() {
+export default function GoogleWorkspace() {
   return (
     <svg
       width="800px"
@@ -31,5 +31,3 @@ function GoogleWorkspace() {
     </svg>
   );
 }
-
-export default GoogleWorkspace;

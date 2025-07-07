@@ -1,4 +1,4 @@
-function ToDoList() {
+export default function ToDoList() {
   return (
     <svg
       version="1.1"
@@ -60,5 +60,3 @@ function ToDoList() {
     </svg>
   );
 }
-
-export default ToDoList;

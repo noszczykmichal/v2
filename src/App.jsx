@@ -1,9 +1,9 @@
-import Layout from "./components/Layout/Layout";
-import Hero from "./components/Sections/Hero";
-import About from "./components/Sections/About";
-import Skills from "./components/Sections/Skills";
-import Projects from "./components/Sections/Projects";
-import Contact from "./components/Sections/Contact";
+import Layout from "@/components/Layout/Layout";
+import Hero from "@/components/Sections/Hero/Hero";
+import About from "@/components/Sections/About/About";
+import Skills from "@/components/Sections/Skills/Skills";
+import Projects from "@/components/Sections/Projects/Projects";
+import Contact from "@/components/Sections/Contact/Contact";
 
 function App() {
   return (

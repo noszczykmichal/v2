@@ -1,12 +1,12 @@
 import { useRef, useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
-import "./About.scss";
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
-import { srConfig } from "../../utils/config";
-import StyledPic from "../UI/StyledPic/StyledPic";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import { srConfig } from "@/utils/config";
+import StyledPic from "@/components/UI/StyledPic/StyledPic";
+import "@/components/Sections/About/About.scss";
 
-function About() {
+export default function About() {
   const revealContainer = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -84,5 +84,3 @@ function About() {
     </section>
   );
 }
-
-export default About;

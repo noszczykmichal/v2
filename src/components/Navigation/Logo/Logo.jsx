@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
 
-import LogoSVG from "./LogoSVG/LogoSVG";
-import "./Logo.scss";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import LogoSVG from "@/components/Navigation/Logo/LogoSVG/LogoSVG";
+import "@/components/Navigation/Logo/Logo.scss";
 
-function Logo() {
+export default function Logo() {
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
   const [isMounted, setIsMounted] = useState(false);
@@ -42,5 +42,3 @@ function Logo() {
     </TransitionGroup>
   );
 }
-
-export default Logo;

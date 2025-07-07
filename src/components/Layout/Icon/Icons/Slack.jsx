@@ -1,4 +1,4 @@
-function Slack() {
+export default function Slack() {
   return (
     <svg
       fill="#000000"
@@ -13,5 +13,3 @@ function Slack() {
     </svg>
   );
 }
-
-export default Slack;

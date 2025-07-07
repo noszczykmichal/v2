@@ -1,4 +1,4 @@
-function Linkedin() {
+export default function Linkedin() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,5 +18,3 @@ function Linkedin() {
     </svg>
   );
 }
-
-export default Linkedin;

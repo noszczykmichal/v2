@@ -1,5 +1,5 @@
-@import "../../sassStyles/mixins";
-@import "../../sassStyles/variables.module";
+@import "@/sassStyles/_variables.module.scss";
+@import "@/sassStyles/_mixins.scss";
 
 .hero {
   font-family: $font-sans;

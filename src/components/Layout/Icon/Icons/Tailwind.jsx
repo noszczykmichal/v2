@@ -1,4 +1,4 @@
-function Tailwind() {
+export default function Tailwind() {
   return (
     <svg
       width="800px"
@@ -30,5 +30,3 @@ function Tailwind() {
     </svg>
   );
 }
-
-export default Tailwind;

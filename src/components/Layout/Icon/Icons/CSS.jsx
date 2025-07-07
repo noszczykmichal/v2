@@ -1,4 +1,4 @@
-function CSS() {
+export default function CSS() {
   return (
     <svg
       fill="#000000"
@@ -11,5 +11,3 @@ function CSS() {
     </svg>
   );
 }
-
-export default CSS;

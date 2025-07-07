@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { TransitionGroup } from "react-transition-group";
-import usePrefersReducedMotion from "../../utils/hooks/usePrefersReducedMotion";
 
-import "./Hero.scss";
-import { navDelay } from "../../utils/config";
-import TransitionWrapper from "../UI/TransitionWrapper/TransitionWrapper";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import { navDelay } from "@/utils/config";
+import TransitionWrapper from "@/components/UI/TransitionWrapper/TransitionWrapper";
+import "@/components/Sections/Hero/Hero.scss";
 
-function About() {
+export default function About() {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -78,5 +78,3 @@ function About() {
     </section>
   );
 }
-
-export default About;

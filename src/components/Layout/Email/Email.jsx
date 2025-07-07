@@ -1,8 +1,8 @@
-import Aside from "../Aside/Aside";
-import { email, linkAnalyticsHandler } from "../../../utils/config";
-import "./Email.scss";
+import Aside from "@/components/Layout/Aside/Aside";
+import { email, linkAnalyticsHandler } from "@/utils/config";
+import "@/components/Layout/Email/Email.scss";
 
-function Email() {
+export default function Email() {
   return (
     <Aside orientation="right">
       <div className="email-container">
@@ -16,5 +16,3 @@ function Email() {
     </Aside>
   );
 }
-
-export default Email;

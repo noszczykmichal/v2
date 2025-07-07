@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 const SCROLL_UP = "up";
 const SCROLL_DOWN = "down";
 
-function useScrollDirection({ initialDirection, thresholdPixels, off } = {}) {
+export default function useScrollDirection({
+  initialDirection,
+  thresholdPixels,
+  off,
+} = {}) {
   const [scrollDir, setScrollDir] = useState(initialDirection);
 
   useEffect(() => {
@@ -47,5 +51,3 @@ function useScrollDirection({ initialDirection, thresholdPixels, off } = {}) {
 
   return scrollDir;
 }
-
-export default useScrollDirection;

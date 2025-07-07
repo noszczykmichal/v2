@@ -2,17 +2,13 @@ import { useState, useEffect, useRef, useContext } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 
-import NavigationItem from "./NavigationItem/NavigationItem";
-import {
-  navLinks,
-  loaderDelay,
-  linkAnalyticsHandler,
-} from "../../../utils/config";
-import usePrefersReducedMotion from "../../../utils/hooks/usePrefersReducedMotion";
-import UIContext from "../../../store/uiContext";
-import "./NavigationItems.scss";
+import NavigationItem from "@/components/Navigation/NavigationItems/NavigationItem/NavigationItem";
+import { navLinks, loaderDelay, linkAnalyticsHandler } from "@/utils/config";
+import usePrefersReducedMotion from "@/utils/hooks/usePrefersReducedMotion";
+import UIContext from "@/store/uiContext";
+import "@/components/Navigation/NavigationItems/NavigationItems.scss";
 
-function NavigationItems() {
+export default function NavigationItems() {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
   const prefersReducedMotionRef = useRef(prefersReducedMotion);
@@ -103,5 +99,3 @@ function NavigationItems() {
     </div>
   );
 }
-
-export default NavigationItems;

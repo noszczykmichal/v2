@@ -1,4 +1,4 @@
-function TypeScript() {
+export default function TypeScript() {
   return (
     <svg
       fill="#000000"
@@ -11,5 +11,3 @@ function TypeScript() {
     </svg>
   );
 }
-
-export default TypeScript;

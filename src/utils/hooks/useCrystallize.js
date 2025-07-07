@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import PropTypes from "prop-types";
 
-function useCrystallize(imagePath) {
+export default function useCrystallize(imagePath) {
   const getImage = gql`
     query GetImage($imagePath: String!) {
       catalogue(path: $imagePath) {
@@ -30,5 +30,3 @@ function useCrystallize(imagePath) {
 useCrystallize.propTypes = {
   imagePath: PropTypes.string.isRequired,
 };
-
-export default useCrystallize;

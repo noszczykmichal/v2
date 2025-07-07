@@ -1,4 +1,4 @@
-function Codewars() {
+export default function Codewars() {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -11,5 +11,3 @@ function Codewars() {
     </svg>
   );
 }
-
-export default Codewars;

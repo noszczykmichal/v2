@@ -1,4 +1,4 @@
-function LikeToLearn() {
+export default function LikeToLearn() {
   return (
     <svg
       fill="#000000"
@@ -11,5 +11,3 @@ function LikeToLearn() {
     </svg>
   );
 }
-
-export default LikeToLearn;

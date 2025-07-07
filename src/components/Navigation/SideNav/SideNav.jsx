@@ -2,12 +2,12 @@ import { createPortal } from "react-dom";
 import { useEffect, useContext, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import "./SideNav.scss";
-import Backdrop from "../../UI/Backdrop/Backdrop";
-import UIContext from "../../../store/uiContext";
-import NavigationItems from "../NavigationItems/NavigationItems";
+import Backdrop from "@/components/UI/Backdrop/Backdrop";
+import UIContext from "@/store/uiContext";
+import NavigationItems from "@/components/Navigation/NavigationItems/NavigationItems";
+import "@/components/Navigation/SideNav/SideNav.scss";
 
-function SideNav() {
+export default function SideNav() {
   const { menuOpen: isMenuOpen, closeSideNavHandler } = useContext(UIContext);
   const closeSideNavRef = useRef(closeSideNavHandler);
   const nodeRef = useRef();
@@ -47,5 +47,3 @@ function SideNav() {
     </>
   );
 }
-
-export default SideNav;

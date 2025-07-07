@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import "./LogoSVG.scss";
+import "@/components/Navigation/Logo/LogoSVG/LogoSVG.scss";
 
 const LogoSVG = forwardRef(function LogoSVG(props, ref) {
   return (
